@@ -9,12 +9,12 @@ Team Members:
  - Cristina Boboc 344
 
 
-## Intermediate deliverable
+## Intermediate deliverable Party Team
 
 
 
 ## Problem statement
-The identified problem is linked to the increasing number of stray animals and the challenge potential adopters face in finding the right pet for them. This issue underscores a clear need to streamline the pet adoption process, ensuring that prospective adopters have easy access to information, images, and details about animals available for adoption. We propose the creation of a specialized pet adoption website that functions as a centralized platform for adoption organizations and potential adopters. The beneficiaries of this solution include prospective adopters, adoption organizations, and, most importantly, the animals in need of homes.
+The recognized problem revolves around the growing population of stray animals and the difficulty potential adopters encounter in identifying suitable pets. This highlights a distinct necessity to simplify the pet adoption process, guaranteeing that individuals seeking adoption have convenient access to comprehensive information, images, and particulars about animals available for adoption. Our proposed solution involves the development of a dedicated pet adoption website, serving as a centralized platform for adoption organizations and prospective adopters. The primary beneficiaries of this solution encompass prospective adopters, adoption organizations, and, critically, the animals awaiting homes.
 
 ## Product features and functionalities
 
