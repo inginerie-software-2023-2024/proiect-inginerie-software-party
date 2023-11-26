@@ -18,47 +18,19 @@ The identified problem is linked to the increasing number of stray animals and t
 
 ## Product features and functionalities
 
-### 1. User Registration
-- Collect and validate user's basic information, such as name, email address, and password.
+| Feature/Functionality  | Status | Description |
+| ------------- | ------------- | ------------- |
+| User Registration  | Not started |Collect and validate user's basic information, such as name, email address, and password.|
+| User Authentication | Not started | Allow users to log in using their email address or username and secure password. |
+| Announcement Adoption| Not started |  Empower pet owners to create adoption announcements, providing essential details like pet name, species, breed, age, size, and a brief description. Allow the upload of multiple images to showcase the pet's appearance. |
+| Pet Listings| Not started | Present a comprehensive list of adoptable pets, offering search and filter options (by species, breed, etc.), along with detailed profiles featuring images and descriptions for each pet.|
+| Adoption Process | Not started | Facilitate adoption applications and provide a system for tracking adoption statuses |
+| Admin Panel | Not started | Manage pet listings with functions to add, edit, and delete entries, as well as review and approve/reject adoption applications. |
+| Messaging System | Not started | Enable communication between users and admins for adoption inquiries, with notifications for new messages. |
+| User Profile | Not started |  Provide personal profiles for users, allowing them to update their contact information. |
+| Comments on Announcements | Not started | The ability for users to leave comments on adoption announcements to share experiences, ask questions, or provide additional information. |
+| Legal Pages | Not started | Terms of Service, Privacy Policy, and other legal information. |
 
-### 2. User Authentication
-- Allow users to log in using their email address or username and secure password.
-
-### 3. User Profile
-- Personal profiles for users.
-- Update contact information.
-
-### 4. Announcement Adoption
-- Allow pet owners to create adoption announcements for their pets.
-- Include fields for essential information such as pet name, species, breed, age, size, and a brief description.
-- Provide an option for pet owners to upload multiple images of the pet to showcase its appearance.
-
-### 5. Comments on Announcements
-- The ability for users to leave comments on adoption announcements to share experiences, ask questions, or provide additional information.
-
-### 6. Pet Listings
-- Display a list of available pets for adoption.
-- Search and filter options (by species, breed, etc.).
-- Detailed pet profiles with images and descriptions.
-
-### 7. Adoption Process
-- Apply for adoption.
-- Adoption status tracking.
-
-### 8. Admin Panel
-- Manage pet listings (add, edit, delete).
-- Review and approve/reject adoption applications.
-
-### 9. Messaging System
-- Allow users and admins to communicate regarding adoption inquiries.
-- Notifications for new messages.
-
-### 10. Legal Pages
-- Terms of Service, Privacy Policy, and other legal information.
-
-### 11. Site Feedback
-- Users can provide specific feedback related to their experience with the adoption process and the website.
-- These reviews are publicly visible on the site, offering essential insights for those considering adoption, contributing to the improvement of the process, and providing a transparent framework for potential adopters.
 
 
 ## Product Roadmap
@@ -100,6 +72,7 @@ Non-functional Requirements (NFRs) describe the qualities of the system that are
 ## Customer Journey
 1. **User Personas**
 [UserPersonas.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/13467893/UserPersonas.pdf)
+
 ![userpersona1](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/e95f4b79-528e-428e-bf21-de3ee8f891a7)
 
 ![userpersona2](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/df169d1e-b44a-4b61-aef3-b2eaf7b52fb2)
@@ -110,13 +83,13 @@ Non-functional Requirements (NFRs) describe the qualities of the system that are
    [UserJourneyMap.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/13467891/UserJourneyMap.pdf)
 ![userjouneymap](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/244ab9e6-334e-4b10-b118-2cb2c8f365d0)
 
-## Diagram
+## Activity Diagram
 ![Diagram](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/d92f959a-73d7-4c6e-acf6-a3d7b9659bf5)
 
 
 
 ## User stories
-## User stories completed [UserStories.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/13467923/UserStories.pdf)
+## User stories with acceptance criteria [UserStories.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/13467923/UserStories.pdf)
 
 ### 1. User Authentication:
 
@@ -181,4 +154,16 @@ As an administrator, I want the capability to review and moderate user-generated
 ### 15. Role-Based Permissions:
   
 As an administrator, I want the capability to assign different roles and permissions to staff members involved in platform management so that I can delegate responsibilities effectively.
+
+## Backlog
+Link Trello: https://trello.com/b/uqZEI5tk/pet-adoption
+
+
+
+![backlog](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/4656f5a2-dca7-4d1d-a3bf-b4e770fff3c3)
+
+Backlog estimation:
+
+![backlogEstimation](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/2b765935-d5e9-4d0b-95be-fb4a5e283728)
+
 
