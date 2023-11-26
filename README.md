@@ -37,7 +37,7 @@ The recognized problem revolves around the growing population of stray animals a
 ![roadmap](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/7f62798d-88db-47ce-bb0f-6a6df75da9f5)
 
 ## Non-functional requirements
-Non-functional Requirements (NFRs) describe the qualities of the system that are not directly linked to its functionality. These attributes focus on how effectively the system's functions are performed.
+Non-functional Requirements (NFRs) are designed to describe the qualities of a system, various attributes of systems not directly linked to their functionality. These attributes do not explain what the system does, but they focus on how effectively those functions are performed.
 
 1. **Performance:**
    - The solution should be able to store the data of up to 25000 users and 2000 pet adoption ads.
