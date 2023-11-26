@@ -100,9 +100,85 @@ Non-functional Requirements (NFRs) describe the qualities of the system that are
 ## Customer Journey
 1. **User Personas**
 [UserPersonas.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/13467893/UserPersonas.pdf)
+![userpersona1](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/e95f4b79-528e-428e-bf21-de3ee8f891a7)
 
-2. **User Journey Map**
+![userpersona2](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/df169d1e-b44a-4b61-aef3-b2eaf7b52fb2)
+
+
+
+3. **User Journey Map**
    [UserJourneyMap.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/13467891/UserJourneyMap.pdf)
+![userjouneymap](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/244ab9e6-334e-4b10-b118-2cb2c8f365d0)
 
 ## Diagram
+![Diagram](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/d92f959a-73d7-4c6e-acf6-a3d7b9659bf5)
+
+
+
 ## User stories
+## User stories completed [UserStories.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/13467923/UserStories.pdf)
+
+### 1. User Authentication:
+
+As a user, I want a unified and secure authentication process that includes a straightforward login and registration flow so that I can quickly access and manage my account.
+
+
+### 2. Profile Setup:
+
+As a new user, I want the option to set up my profile immediately after registration so that I can personalize my experience on the platform. 
+
+
+### 3. "About Us" Section:
+
+As a curious visitor to the website, I want access to a comprehensive "About Us" section that provides detailed insights into the platform so that I can enhance my understanding and trust in the platform.
+
+
+### 4. Blog articles:
+
+As a website visitor interested in pet care and adoption, I want to see blog articles featured on the homepage, so that I can easily access informative content about pets.
+
+### 5. Testimonials:
+
+As a user, I want to read  testimonials from other individuals so that I can gain valuable insights into their experiences with the platform.
+
+### 6. Terms and Conditions Access:
+
+As a user accessing the pet adoption platform, I want to be presented with a Terms and Conditions pop-up, so that I am aware of and agree to the terms before using the platform's services.
+
+### 7. Contact Form:
+
+As a visitor, I want to easily find and access a contact form so that I can have a straightforward method to reach out to the platform's team for general inquiries or assistance.
+
+### 8. Animal Description:
+
+As a visitor, I want to easily access detailed descriptions of animals, including their characteristics and relevant information so that I can make informed decisions about potential adoptions.
+
+### 9. Adoption Announcements Lifecycle:
+
+As a pet owner, I want to seamlessly create, update, and remove adoption announcements so that I can ensure the information displayed is accurate and relevant, facilitating the adoption process.
+
+### 10. Explore and Filter Adoption Announcements:
+
+As a user in search of a pet, I want the capability to explore and filter adoption announcements based on specific criteria so that I can easily find animals that match my preferences and lifestyle.
+
+### 11. Leave Comments on Announcements:
+
+As a potential adopter, I want the capability to leave comments on adoption announcements so that I can inquire about additional details and engage with other users in the community.
+
+
+### 12. Messaging Pet Owners:
+
+As a user, I want to send messages to the owners of pets available for adoption so that I can inquire about details regarding the animal or express my interest in adopting.
+
+
+### 13. Pet Adoption Application
+
+As a potential pet adopter excited to provide a loving home, I want to submit an adoption application easily and efficiently, so that I can express my interest in adopting a furry companion.
+
+### 14. Content Moderation:
+As an administrator, I want the capability to review and moderate user-generated content, including adoption announcements, comments, and posts, so that I can maintain a positive and safe community environment.
+
+### 15. Role-Based Permissions:
+  
+As an administrator, I want the capability to assign different roles and permissions to staff members involved in platform management so that I can delegate responsibilities effectively.
+
