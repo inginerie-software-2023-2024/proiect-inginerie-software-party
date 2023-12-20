@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PetConnect.props" />
+</Project>
