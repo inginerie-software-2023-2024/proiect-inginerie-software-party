@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
+using PetConnect.Models;
 
 namespace PetConnect.Data
 {
@@ -9,5 +11,9 @@ namespace PetConnect.Data
             : base(options)
         {
         }
+        public DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<Pet> Pets { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<AdoptionRequest> AdoptionRequests { get; set; }
     }
 }
