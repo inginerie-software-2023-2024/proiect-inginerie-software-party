@@ -1,0 +1,93 @@
+﻿
+
+
+
+<h2>Afisare anunt</h2>
+<br />
+
+
+
+<div class="flex flex-col items-center bg-white border border-gray-400 rounded-lg shadow md:flex-row md:max-w-screen-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <img class="object-cover w-full md:w-1/2 rounded-t-lg h-70 md:h-auto md:rounded-none md:rounded-l-lg" src="@ViewBag.Pet.Image" alt="Pet Image">
+    <div class="flex flex-col justify-between p-4 w-full md:w-1/2 leading-normal">
+        <h3 class="text-2xl font-bold mb-4">@ViewBag.Pet.Name</h3>
+        <table >
+            <tr>
+                <td><strong>Specie</strong></td>
+                <td>@ViewBag.Pet.Species</td>
+            </tr>
+            <tr>
+                <td><strong>Rasa</strong></td>
+                <td>@ViewBag.Pet.Breed</td>
+            </tr>
+            <tr>
+                <td><strong>Varsta</strong></td>
+                <td>@ViewBag.Pet.Age</td>
+            </tr>
+            <tr>
+                <td><strong>Marime</strong></td>
+                <td>@ViewBag.Pet.Size</td>
+            </tr>
+            <tr>
+                <td><strong>Gen</strong></td>
+                @if (ViewBag.Pet.Sex)
+                {
+                    <td>Mascul</td>
+                }
+                else
+                {
+                    <td>Femela</td>
+                }
+            </tr>
+            <tr>
+                <td><strong>Culoare</strong></td>
+                <td>@ViewBag.Pet.Color</td>
+            </tr>
+            <tr>
+                <td><strong>Vaccinat</strong></td>
+                @if (ViewBag.Pet.Vaccined)
+                {
+                    <td>Da</td>
+                }
+                else
+                {
+                    <td>Nu</td>
+                }
+            </tr>
+            <tr>
+                <td><strong>Sterilizat</strong></td>
+                @if (ViewBag.Pet.Sterilized)
+                {
+                    <td>Da</td>
+                }
+                else
+                {
+                    <td>Nu</td>
+                }
+            </tr>
+            <tr>
+                <td><strong>Descriere</strong></td>
+                <td>@ViewBag.Pet.Description</td>
+            </tr>
+            <tr>
+                <td><strong>Locatie</strong></td>
+                <td>@ViewBag.Pet.Location</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<form method="post" action="/Pets/Delete/@ViewBag.Pet.PetId">
+
+    <button type="submit">Sterge anunt</button>
+
+</form>
+
+<br />
+
+
+<a href="/Pets/Index">Afisare anunturi</a>
+
+
+

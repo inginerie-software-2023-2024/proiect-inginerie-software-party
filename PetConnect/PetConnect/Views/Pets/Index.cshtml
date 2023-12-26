@@ -1,0 +1,33 @@
+﻿
+
+<h2>Afisare animalute</h2>
+<br />
+
+<div class="flex flex-wrap">
+    @foreach (var pet in ViewBag.Pets)
+    {
+        <div class="relative flex flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md w-80 m-2">
+            <a href="/Pets/Show/@pet.PetId">
+                <div class="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
+                    <img src="@pet.Image" alt="Pet Image" class="w-full h-41 object-cover">
+                
+                </div>
+                <div class="p-6">
+                    <h4 class="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        @pet.Name
+                    </h4>
+                    <p class="text-sm mt-2">Gen: @(pet.Sex ? "Mascul" : "Femela") Age: @pet.Age</p>
+                </div>
+            </a>
+
+            <a href="/Pets/Edit/@pet.PetId" class="text-xs text-blue-700 text-center hover:underline bg-blue-200 px-3 py-1 rounded-full my-2 mx-2">
+                Editare Anunt
+            </a>
+        </div>
+    }
+</div>
+
+<a href="/Pets/New">Adaugare anunt</a>
+    
+
+ 

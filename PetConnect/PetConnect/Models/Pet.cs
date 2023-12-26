@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PetConnect.Models
 {
@@ -16,10 +17,10 @@ namespace PetConnect.Models
         public string Color { get; set; }
         public bool Vaccined { get; set; }
         public bool Sterilized { get; set; }
-        public string Locatiom { get; set; }
+        public string Location { get; set; }
         public string Description { get; set; }
+        public string Image { get; set; }
         public string? UserId { get; set; }
-
         virtual public IdentityUser? User { get; set; }
         virtual public ICollection<AdoptionRequest>? AdoptionRequests { get; set; }
         virtual public ICollection<Comment>? Comments { get; set; }

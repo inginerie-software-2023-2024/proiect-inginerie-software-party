@@ -1,0 +1,111 @@
+﻿
+
+
+@model PetConnect.Models.Pet
+
+<h2 class="text-center mt-5">Adaugare anunt</h2>
+<br />
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6 offset-3">
+
+          
+            @using (Html.BeginForm("UploadImage", "Pets", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name, "Nume animalut")
+                    <br />
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Species, "Specie animalut")
+                    <br />
+                    @Html.TextBoxFor(m => m.Species, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Species, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Breed, "Rasa animalut")
+                    <br />
+                    @Html.TextBoxFor(m => m.Breed, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Breed, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Age, "Varsta animalut")
+                    <br />
+                    @Html.TextBoxFor(m => m.Age, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Age, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Size, "Marime animalut")
+                    <br />
+                    @Html.TextBoxFor(m => m.Size, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Size, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Sex, "Gen ")
+                    <br />
+                    <label>
+                        @Html.RadioButtonFor(m => m.Sex, true) Mascul
+                    </label>
+                    <label>
+                        @Html.RadioButtonFor(m => m.Sex, false) Femela
+                    </label>
+                    @Html.ValidationMessageFor(m => m.Sex, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Color, "Culoare")
+                    <br />
+                    @Html.TextBoxFor(m => m.Color, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Color, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Vaccined, "Vaccinat")
+                    <br />
+                    @Html.CheckBoxFor(m => m.Vaccined)
+                    @Html.ValidationMessageFor(m => m.Vaccined, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Sterilized, "Sterilizat")
+                    <br />
+                    @Html.CheckBoxFor(m => m.Sterilized)
+                    @Html.ValidationMessageFor(m => m.Sterilized, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Location, "Locatie")
+                    <br />
+                    @Html.TextBoxFor(m => m.Location, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Location, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Description, "Descriere")
+                    <br />
+                    @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+                </div>
+
+                <br />
+                <input class="form-control" type="file" name="PetImage" />
+                <br />
+
+                <div class="form-group">
+                    <button class="btn btn-success" type="submit">Adauga pet</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
