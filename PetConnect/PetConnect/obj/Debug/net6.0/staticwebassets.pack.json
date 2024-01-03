@@ -1,363 +1,315 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PetConnect.bundle.scp.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PetConnect.bundle.scp.css",
       "PackagePath": "staticwebassets\\PetConnect.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\css\\site.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\favicon.ico",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Pet1.png",
-      "PackagePath": "staticwebassets\\images\\Pet1.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Pet2.png",
-      "PackagePath": "staticwebassets\\images\\Pet2.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Pet3.png",
-      "PackagePath": "staticwebassets\\images\\Pet3.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Profile1.png",
-      "PackagePath": "staticwebassets\\images\\Profile1.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Profile2.png",
-      "PackagePath": "staticwebassets\\images\\Profile2.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Profile3.png",
-      "PackagePath": "staticwebassets\\images\\Profile3.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Profile4.png",
-      "PackagePath": "staticwebassets\\images\\Profile4.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Profile5.png",
-      "PackagePath": "staticwebassets\\images\\Profile5.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Profile6.png",
-      "PackagePath": "staticwebassets\\images\\Profile6.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\aboutus.png",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\aboutus.png",
       "PackagePath": "staticwebassets\\images\\aboutus.png"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\article1.png",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\article1.png",
       "PackagePath": "staticwebassets\\images\\article1.png"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\article2.png",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\article2.png",
       "PackagePath": "staticwebassets\\images\\article2.png"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\article3.png",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\article3.png",
       "PackagePath": "staticwebassets\\images\\article3.png"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\image 17.png",
-      "PackagePath": "staticwebassets\\images\\image 17.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\image 4.png",
-      "PackagePath": "staticwebassets\\images\\image 4.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\image 5.png",
-      "PackagePath": "staticwebassets\\images\\image 5.png"
-    },
-    {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\image1.png",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\image1.png",
       "PackagePath": "staticwebassets\\images\\image1.png"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\js\\site.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\base.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\base.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\base.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\base.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\base.min.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\base.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\components.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\components.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\components.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\components.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\components.min.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\components.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind-dark.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind-dark.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\tailwind-dark.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind-dark.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind-dark.min.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\tailwind-dark.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind-experimental.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind-experimental.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\tailwind-experimental.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind-experimental.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind-experimental.min.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\tailwind-experimental.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\tailwind.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\tailwind.min.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\tailwind.min.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\utilities.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\utilities.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\utilities.css"
     },
     {
-      "Id": "C:\\Users\\cilte\\Source\\Repos\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\utilities.min.css",
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\tailwindcss\\utilities.min.css"
     },
     {
