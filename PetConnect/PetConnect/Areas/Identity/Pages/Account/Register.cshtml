@@ -1,0 +1,144 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h2>Create a new account.</h2>
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <label asp-for="Input.Email">Email</label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <label asp-for="Input.Password">Password</label>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <input type="checkbox" asp-for="Input.AgreedTandC" aria-required="true" />
+                <label asp-for="Input.AgreedTandC">
+                    <a href"#" role="button" data-bs-toggle="modal" data-bs-target="#Modal" class="text-primary">
+                        Termeni si conditii
+                    </a>
+                </label>
+                <br />
+                <span asp-validation-for="Input.AgreedTandC" class="text-danger"></span>
+            </div>
+
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+        </form>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <h3>Use another service to register.</h3>
+            <hr />
+            @{
+                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                {
+                    <div>
+                        <p>
+                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">
+                                article
+                                about setting up this ASP.NET application to support logging in via external services
+                            </a>.
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                        <div>
+                            <p>
+                                @foreach (var provider in Model.ExternalLogins!)
+                                {
+                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                }
+                            </p>
+                        </div>
+                    </form>
+                }
+            }
+        </section>
+    </div>
+</div>
+
+<div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold" id="ModalLabel">Termeni si conditii</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <b>1. Acceptarea Termenilor</b>
+                <p>
+                    Utilizarea acestui site implică acceptarea integrală a tuturor termenilor și condițiilor prezentate aici.
+                    Dacă nu sunteți de acord cu acești termeni, vă rugăm să nu utilizați acest site.
+                </p>
+
+                <b>2. Eligibilitate</b>
+                <p>
+                    Prin utilizarea acestui site, confirmați că aveți cel puțin 18 ani sau că sunteți sub supravegherea unui adult.
+                </p>
+
+                <b>3. Listarea Animalelor</b>
+                <p>
+                    Site-ul facilitează listarea animalelor disponibile pentru adopție. Informațiile furnizate de
+                    către donatori trebuie să fie precise și complete. Ne rezervăm dreptul de a elimina sau modifica
+                    orice conținut care nu respectă aceste criterii.
+                </p>
+
+                <b>4. Procesul de Adopție</b>
+                <p>
+                    Procesul de adopție este gestionat între donator și solicitant. PetConnect nu este responsabil
+                    pentru orice neînțelegere sau problemă care poate apărea între părți.
+                </p>
+
+                <b> 5. Conținutul Utilizatorilor</b>
+                <p>
+                    Utilizatorii sunt responsabili pentru conținutul pe care îl furnizează. PetConnect își rezervă dreptul
+                    de a elimina sau modifica orice conținut care încalcă regulile sau care este considerat nepotrivit.
+                </p>
+
+                <b> 6. Confidențialitate</b>
+                <p>
+                    Informațiile personale furnizate pe acest site sunt protejate conform Politicii noastre de Confidențialitate.
+                </p>
+
+                <b>7. Drepturi de Autor</b>
+                <p>
+                    Conținutul site-ului, inclusiv textul, imagini, și logo-urile, sunt protejate de drepturile de autor ale
+                    PetConnect SRL sau ale altor terți. Utilizarea neautorizată a acestui conținut este strict interzisă.
+                </p>
+
+                <b>8. Modificări ale Termenilor:</b>
+                <p>
+                    Ne rezervăm dreptul de a modifica acești termeni în orice moment, fără notificare prealabilă.
+                    Este responsabilitatea dvs. să verificați periodic eventualele modificări.
+                </p>
+                <p>
+                    Prin utilizarea acestui site, sunteți de acord cu acești termeni și condiții. Dacă aveți întrebări sau nelămuriri, 
+                    vă rugăm să ne contactați la pet_connect@gmail.com.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
