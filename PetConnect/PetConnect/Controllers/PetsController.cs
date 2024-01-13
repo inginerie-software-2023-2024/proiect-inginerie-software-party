@@ -2,9 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using PetConnect.Data;
 using PetConnect.Models;
-using System;
-using Microsoft.EntityFrameworkCore;
-using static System.Net.Mime.MediaTypeNames;
+using Microsoft.AspNetCore.Authorization;
+using System.Drawing;
 
 namespace PetConnect.Controllers
 {
@@ -12,20 +11,24 @@ namespace PetConnect.Controllers
     {
         private readonly ApplicationDbContext db;
         private IWebHostEnvironment _env;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public PetsController(ApplicationDbContext context, IWebHostEnvironment env)
+        public PetsController(ApplicationDbContext context,
+                              IWebHostEnvironment env,
+                              UserManager<ApplicationUser> userManager)
         {
             db = context;
             _env = env;
+            _userManager = userManager;
         }
 
 
         public IActionResult Index()
         {
-            
+
             var pets = from pet in db.Pets
-                           orderby pet.Name
-                           select pet;
+                       orderby pet.Name
+                       select pet;
             ViewBag.Pets = pets;
             return View();
 
@@ -37,15 +40,18 @@ namespace PetConnect.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult New()
         {
             return View();
         }
         [HttpPost]
+        [Authorize]
         public IActionResult New(Pet p)
         {
             try
             {
+                p.UserId = _userManager.GetUserId(User);
                 db.Pets.Add(p);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -56,12 +62,14 @@ namespace PetConnect.Controllers
             }
         }
         //Imagini
+        [Authorize]
         public IActionResult UploadImage()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> UploadImage(Pet pet, IFormFile PetImage)
         {
             var databaseFileName = "";
@@ -85,24 +93,36 @@ namespace PetConnect.Controllers
             //Salvam storagePath-ul in baza de date
 
             pet.Image = databaseFileName;
+            pet.UserId = _userManager.GetUserId(User);
             db.Pets.Add(pet);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
 
-
-        public IActionResult Edit(int id)
+        [Authorize]
+        public async Task<IActionResult> Edit(int id)
         {
             Pet pet = db.Pets.Find(id);
-            return View(pet);
+            string currentUserId = _userManager.GetUserId(User);
+
+            if (currentUserId == pet.UserId ||
+                User.IsInRole("Admin"))
+            {
+                return View(pet);
+            }
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
         public async Task<ActionResult> Edit(int id, Pet requestPet, IFormFile PetImage)
         {
             Pet pet = db.Pets.Find(id);
-          
-             try
+            string currentUserId = _userManager.GetUserId(User);
+
+            if (currentUserId == pet.UserId ||
+                User.IsInRole("Admin"))
+            {
+                try
                 {
                     pet.Name = requestPet.Name;
                     pet.Species = requestPet.Species;
@@ -135,10 +155,7 @@ namespace PetConnect.Controllers
                         pet.Image = "/images/" + PetImage.FileName;
                     }
 
-
-
-
-                db.SaveChanges();
+                    db.SaveChanges();
 
                     return RedirectToAction("Index");
                 }
@@ -147,21 +164,28 @@ namespace PetConnect.Controllers
                     return RedirectToAction("Edit", pet.PetId);
                 }
             }
-       
 
-
-        [HttpPost]
-        public ActionResult Delete(int id)
-        {
-            Pet pet = db.Pets.Find(id);
-            db.Pets.Remove(pet);
-            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
 
 
+        [HttpPost]
+        [Authorize]
+        public async Task<ActionResult> Delete(int id)
+        {
+            Pet pet = db.Pets.Find(id);
+            string currentUserId = _userManager.GetUserId(User);
 
+            if (currentUserId == pet.UserId ||
+                User.IsInRole("Admin"))
+            {
+                db.Pets.Remove(pet);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
 
     }
 }
