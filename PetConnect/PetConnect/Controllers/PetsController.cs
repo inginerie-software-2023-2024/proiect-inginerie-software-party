@@ -4,62 +4,171 @@ using PetConnect.Data;
 using PetConnect.Models;
 using Microsoft.AspNetCore.Authorization;
 using System.Drawing;
+using Microsoft.EntityFrameworkCore;
 
 namespace PetConnect.Controllers
 {
     public class PetsController : Controller
     {
         private readonly ApplicationDbContext db;
+        private ApplicationDbContext _context;
         private IWebHostEnvironment _env;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
         public PetsController(ApplicationDbContext context,
                               IWebHostEnvironment env,
-                              UserManager<ApplicationUser> userManager)
+                              UserManager<ApplicationUser> userManager,
+                              RoleManager<IdentityRole> roleManager)
         {
             db = context;
             _env = env;
             _userManager = userManager;
+            _roleManager = roleManager;
         }
 
 
         public IActionResult Index()
         {
 
-            var pets = from pet in db.Pets
+            /*var pets = from pet in db.Pets
                        orderby pet.Name
-                       select pet;
+                       select pet;*/
+
+            var pets = db.Pets.Include("User");
             ViewBag.Pets = pets;
             return View();
 
         }
         public ActionResult Show(int id)
+        {/*
+            Pet pet = db.Pets.Find(id);*/
+            Pet pet   =  db.Pets.Include("User")
+                                .Include("Comments")
+                                .Include("Comments.User")
+                                .Where(pet => pet.PetId == id)
+                                .First();
+            SetAccessRights();
+            return View(pet);
+        }
+
+        // butoanele editare/stergere sunt vizibile doar adminului 
+        // care le-a adaugat
+        private void SetAccessRights()
         {
-            Pet pet = db.Pets.Find(id);
-            ViewBag.Pet = pet;
+            ViewBag.AfisareButoane = false;
+
+            ViewBag.UserCurent = _userManager.GetUserId(User);
+
+            ViewBag.EsteAdmin = User.IsInRole("Admin");
+
+            ViewBag.EsteUser = User.IsInRole("User");
+
+        }
+        // Adaugarea unui comentariu asociat unui articol in baza de date
+        [HttpPost]
+        [Authorize(Roles = "User,Admin")]
+        public IActionResult Show([FromForm] Comment comment)
+        {
+            comment.Date = DateTime.Now;
+            comment.UserId = _userManager.GetUserId(User);
+
+            if (ModelState.IsValid)
+            {
+                db.Comments.Add(comment);
+                db.SaveChanges();
+                return Redirect("/Pets/Show/" + comment.PetId);
+            }
+
+            else
+            {
+                Pet pet = db.Pets.Include("User")
+                                   .Include("Comments")
+                                   .Include("Comments.User")
+                                   .Where(pet => pet.PetId == comment.PetId)
+                                   .First();
+
+                SetAccessRights();
+
+                //return Redirect("/Articles/Show/" + comm.ArticleId);
+
+                return View(pet);
+            }
+        }
+
+
+
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult New()
+        {
+            Pet pet = new Pet();
+
+            // editorul trimite cereri adminului pt adaugare
+            pet.UserId = _userManager.GetUserId(User);
+            pet.Approved = User.IsInRole("Admin");
+
+            return View(pet);
+        }
+        [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public IActionResult New(Pet pet)
+        {
+            pet.UserId = _userManager.GetUserId(User);
+            pet.Approved = User.IsInRole("Admin");
+
+            if (ModelState.IsValid)
+            {
+                db.Pets.Add(pet);
+                db.SaveChanges();
+
+                if (User.IsInRole("Admin"))
+                {
+                    TempData["message"] = "Anuntul a fost adaugat";
+                }
+                else
+                {
+                    TempData["message"] = "Anuntul asteapta aprobarea adminului";
+                }
+
+                return RedirectToAction("Index");
+
+
+            }
+            else
+            {
+                return View(pet);
+            }
+        }
+        [Authorize(Roles = "Admin")]
+        public IActionResult Approve()
+        {
+            var pets = db.Pets.Include("User");
+            ViewBag.Pets = pets;
+
+            if (TempData.ContainsKey("message"))
+                ViewBag.Message = TempData["message"];
+
             return View();
         }
 
-        [Authorize]
-        public IActionResult New()
-        {
-            return View();
-        }
+
         [HttpPost]
-        [Authorize]
-        public IActionResult New(Pet p)
+        [Authorize(Roles = "Admin")]
+        public IActionResult Approve(int id)
         {
-            try
+            Pet pet = db.Pets.Find(id);
+            pet.Approved = true;
+
+            if (ModelState.IsValid)
             {
-                p.UserId = _userManager.GetUserId(User);
-                db.Pets.Add(p);
+                //db.Books.Add(book);
                 db.SaveChanges();
+                TempData["message"] = "Anuntul a fost adaugat";
                 return RedirectToAction("Index");
             }
-            catch (Exception)
-            {
-                return View();
-            }
+
+            return View();
         }
         //Imagini
         [Authorize]
@@ -99,28 +208,34 @@ namespace PetConnect.Controllers
             return RedirectToAction("Index");
         }
 
-        [Authorize]
+     
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Edit(int id)
         {
             Pet pet = db.Pets.Find(id);
             string currentUserId = _userManager.GetUserId(User);
 
-            if (currentUserId == pet.UserId ||
-                User.IsInRole("Admin"))
+            if (pet.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
             {
                 return View(pet);
             }
-            return RedirectToAction("Index");
+            else
+            {
+                TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui anunt care nu va apartine";
+                return RedirectToAction("Index");
+            }
+
+           
         }
 
+        
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult> Edit(int id, Pet requestPet, IFormFile PetImage)
         {
             Pet pet = db.Pets.Find(id);
             string currentUserId = _userManager.GetUserId(User);
-
-            if (currentUserId == pet.UserId ||
-                User.IsInRole("Admin"))
+            if (currentUserId == pet.UserId || User.IsInRole("Admin"))
             {
                 try
                 {
@@ -154,37 +269,45 @@ namespace PetConnect.Controllers
                         // Actualizați calea imaginii în obiectul Pet
                         pet.Image = "/images/" + PetImage.FileName;
                     }
-
+                    /*  TempData["message"] = "Anuntul a fost modificat";*/
                     db.SaveChanges();
 
                     return RedirectToAction("Index");
                 }
                 catch (Exception)
                 {
-                    return RedirectToAction("Edit", pet.PetId);
+                    /*TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui anunt care nu va apartine";*/
+                    return RedirectToAction("Index");
                 }
-            }
 
+            }
             return RedirectToAction("Index");
+
         }
 
 
 
+        
+        [Authorize(Roles = "Admin")]
         [HttpPost]
-        [Authorize]
         public async Task<ActionResult> Delete(int id)
         {
-            Pet pet = db.Pets.Find(id);
-            string currentUserId = _userManager.GetUserId(User);
+            Pet pet = db.Pets.Include("Comments")
+                                 .Where(pet => pet.PetId == id)
+                                 .First();
 
-            if (currentUserId == pet.UserId ||
-                User.IsInRole("Admin"))
+            if (pet.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
             {
                 db.Pets.Remove(pet);
                 db.SaveChanges();
+                TempData["message"] = "Anuntul  a fost stearsa";
+                return RedirectToAction("Index");
             }
-
-            return RedirectToAction("Index");
+            else
+            {
+                TempData["message"] = "Nu aveti dreptul sa stergeti un anunt care nu va apartine";
+                return RedirectToAction("Index");
+            }
         }
 
     }

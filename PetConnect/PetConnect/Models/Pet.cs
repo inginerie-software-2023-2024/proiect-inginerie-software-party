@@ -22,6 +22,7 @@ namespace PetConnect.Models
         public string Image { get; set; }
         public string? UserId { get; set; }
         virtual public IdentityUser? User { get; set; }
+        public bool Approved { get; set; }
         virtual public ICollection<AdoptionRequest>? AdoptionRequests { get; set; }
         virtual public ICollection<Comment>? Comments { get; set; }
     }
