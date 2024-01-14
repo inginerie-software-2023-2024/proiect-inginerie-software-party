@@ -1,4 +1,4 @@
-﻿
+﻿@model PetConnect.Models.Pet
 
 
 
@@ -6,31 +6,30 @@
 <br />
 
 
-
 <div class="flex flex-col items-center bg-white border border-gray-400 rounded-lg shadow md:flex-row md:max-w-screen-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <img class="object-cover w-full md:w-1/2 rounded-t-lg h-70 md:h-auto md:rounded-none md:rounded-l-lg" src="@ViewBag.Pet.Image" alt="Pet Image">
+    <img class="object-cover w-full md:w-1/2 rounded-t-lg h-70 md:h-auto md:rounded-none md:rounded-l-lg" src="@Model.Image" alt="Pet Image">
     <div class="flex flex-col justify-between p-4 w-full md:w-1/2 leading-normal">
-        <h3 class="text-2xl font-bold mb-4">@ViewBag.Pet.Name</h3>
+        <h3 class="text-2xl font-bold mb-4">@Model.Name</h3>
         <table >
             <tr>
                 <td><strong>Specie</strong></td>
-                <td>@ViewBag.Pet.Species</td>
+                <td>@Model.Species</td>
             </tr>
             <tr>
                 <td><strong>Rasa</strong></td>
-                <td>@ViewBag.Pet.Breed</td>
+                <td>@Model.Breed</td>
             </tr>
             <tr>
                 <td><strong>Varsta</strong></td>
-                <td>@ViewBag.Pet.Age</td>
+                <td>@Model.Age</td>
             </tr>
             <tr>
                 <td><strong>Marime</strong></td>
-                <td>@ViewBag.Pet.Size</td>
+                <td>@Model.Size</td>
             </tr>
             <tr>
                 <td><strong>Gen</strong></td>
-                @if (ViewBag.Pet.Sex)
+                @if (Model.Sex)
                 {
                     <td>Mascul</td>
                 }
@@ -41,11 +40,11 @@
             </tr>
             <tr>
                 <td><strong>Culoare</strong></td>
-                <td>@ViewBag.Pet.Color</td>
+                <td>@Model.Color</td>
             </tr>
             <tr>
                 <td><strong>Vaccinat</strong></td>
-                @if (ViewBag.Pet.Vaccined)
+                @if (Model.Vaccined)
                 {
                     <td>Da</td>
                 }
@@ -56,7 +55,7 @@
             </tr>
             <tr>
                 <td><strong>Sterilizat</strong></td>
-                @if (ViewBag.Pet.Sterilized)
+                @if (Model.Sterilized)
                 {
                     <td>Da</td>
                 }
@@ -67,18 +66,18 @@
             </tr>
             <tr>
                 <td><strong>Descriere</strong></td>
-                <td>@ViewBag.Pet.Description</td>
+                <td>@Model.Description</td>
             </tr>
             <tr>
                 <td><strong>Locatie</strong></td>
-                <td>@ViewBag.Pet.Location</td>
+                <td>@Model.Location</td>
             </tr>
         </table>
     </div>
 </div>
 
 
-<form method="post" action="/Pets/Delete/@ViewBag.Pet.PetId">
+<form method="post" action="/Pets/Delete/@Model.PetId">
 
     <button type="submit">Sterge anunt</button>
 
@@ -90,4 +89,101 @@
 <a href="/Pets/Index">Afisare anunturi</a>
 
 
+
+@foreach (var comm in Model.Comments)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-8">
+
+                <div>
+
+                    <p>@comm.Content</p>
+                    <small>@comm.Date</small>
+                     <strong> <i class="bi bi-person"></i> @comm.User.UserName</strong>
+
+
+                </div>
+                <br>
+
+                @if (comm.UserId == ViewBag.UserCurent || ViewBag.EsteAdmin)
+                {
+                    <div class="d-flex">
+
+                        <div>
+
+                            <a class="btn btn-outline-primary" href="/Comments/Edit/@comm.Id"><i class="bi bi-pencil-square"></i>Editeaza</a>
+
+                        </div>
+
+                        <div>
+
+                            <form method="post" action="/Comments/Delete/@comm.Id">
+
+                                <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Sterge</button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+                }
+                <br />
+
+            </div>
+            <br>
+            <br>
+            <div class="col-md-2"></div>
+
+        </div>
+
+    </div>
+}
+@if (ViewBag.EsteAdmin || ViewBag.EsteUser)
+{
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-8">
+
+                <div class="card">
+
+                    <form method="post" action="/Pets/Show/@Model.PetId">
+
+                        <div class="card-body">
+
+                            <input type="hidden" name="PetId" value="@Model.PetId" />
+
+                            <label>Continut comentariu</label>
+                            <br />
+
+                            <textarea class="form-control" name="Content"></textarea>
+
+                            @Html.ValidationMessage("Content", null, new { @class = "text-danger"})
+
+                            <br /><br />
+
+                            <button class="btn btn-primary " type="submit">Adauga comentariul</button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-2"></div>
+
+        </div>
+
+    </div>
+}
 
