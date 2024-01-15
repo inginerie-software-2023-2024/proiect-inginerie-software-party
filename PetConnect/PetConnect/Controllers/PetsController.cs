@@ -37,9 +37,39 @@ namespace PetConnect.Controllers
 
             var pets = db.Pets.Include("User");
             ViewBag.Pets = pets;
+
+
+            int _perPage = 12; //numarul pe articole per pagina
+
+            if (TempData.ContainsKey("message"))
+            {
+                ViewBag.message = TempData["message"].ToString();
+            }
+
+            int totalItems = pets.Count(); //verificam de fiecare data, e un nr variabil de anunturi
+
+            var currentPage = Convert.ToInt32(HttpContext.Request.Query["page"]); //se preia pagina curenta din view-ul asocial (val. param. page din ruta)
+
+            var offset = 0; //offset 0 pt prima pagina
+
+            if (!currentPage.Equals(0))
+            {
+                offset = (currentPage - 1) * _perPage; //calculam offset-ul pt celelalte pagini
+            }
+
+            var paginatedPets = pets.Skip(offset).Take(_perPage); //se preiau articolele dupa offset
+
+            ViewBag.lastPage = Math.Ceiling((float)totalItems / (float)_perPage); //ultima pagina
+
+            ViewBag.Pets = paginatedPets;
+
+            ViewBag.PaginationBaseUrl = "/Pets/Index/?page";
+            
             return View();
 
         }
+
+
         public ActionResult Show(int id)
         {/*
             Pet pet = db.Pets.Find(id);*/
@@ -51,6 +81,7 @@ namespace PetConnect.Controllers
             SetAccessRights();
             return View(pet);
         }
+
 
         // butoanele editare/stergere sunt vizibile doar adminului 
         // care le-a adaugat
@@ -65,7 +96,9 @@ namespace PetConnect.Controllers
             ViewBag.EsteUser = User.IsInRole("User");
 
         }
-        // Adaugarea unui comentariu asociat unui articol in baza de date
+
+
+        // Adaugarea unui comentariu 
         [HttpPost]
         [Authorize(Roles = "User,Admin")]
         public IActionResult Show([FromForm] Comment comment)
@@ -97,8 +130,6 @@ namespace PetConnect.Controllers
         }
 
 
-
-
         [Authorize(Roles = "Admin")]
         public IActionResult New()
         {
@@ -110,6 +141,8 @@ namespace PetConnect.Controllers
 
             return View(pet);
         }
+
+
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public IActionResult New(Pet pet)
@@ -140,6 +173,8 @@ namespace PetConnect.Controllers
                 return View(pet);
             }
         }
+
+
         [Authorize(Roles = "Admin")]
         public IActionResult Approve()
         {
@@ -170,12 +205,15 @@ namespace PetConnect.Controllers
 
             return View();
         }
+
+
         //Imagini
         [Authorize]
         public IActionResult UploadImage()
         {
             return View();
         }
+
 
         [HttpPost]
         [Authorize]
@@ -284,8 +322,6 @@ namespace PetConnect.Controllers
             return RedirectToAction("Index");
 
         }
-
-
 
         
         [Authorize(Roles = "Admin")]
