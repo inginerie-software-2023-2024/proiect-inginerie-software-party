@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PetConnect.Data;
 
@@ -11,9 +12,10 @@ using PetConnect.Data;
 namespace PetConnect.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240116103616_adoptionRequestsMig")]
+    partial class adoptionRequestsMig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -239,7 +241,7 @@ namespace PetConnect.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RequestId"), 1L, 1);
 
                     b.Property<string>("AdopterId")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Message")
                         .IsRequired()
@@ -254,11 +256,14 @@ namespace PetConnect.Data.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("RequestId");
 
-                    b.HasIndex("AdopterId");
-
                     b.HasIndex("PetId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("AdoptionRequests");
                 });
@@ -428,17 +433,17 @@ namespace PetConnect.Data.Migrations
 
             modelBuilder.Entity("PetConnect.Models.AdoptionRequest", b =>
                 {
-                    b.HasOne("PetConnect.Models.ApplicationUser", "Adopter")
-                        .WithMany("AdoptionRequests")
-                        .HasForeignKey("AdopterId");
-
                     b.HasOne("PetConnect.Models.Pet", "Pet")
                         .WithMany("AdoptionRequests")
                         .HasForeignKey("PetId");
 
-                    b.Navigation("Adopter");
+                    b.HasOne("PetConnect.Models.ApplicationUser", "User")
+                        .WithMany("AdoptionRequests")
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Pet");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("PetConnect.Models.Comment", b =>
