@@ -248,7 +248,7 @@ namespace PetConnect.Controllers
 
      
         [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> Edit(int id)
+        public IActionResult Edit(int id)
         {
             Pet pet = db.Pets.Find(id);
             string currentUserId = _userManager.GetUserId(User);
@@ -326,7 +326,7 @@ namespace PetConnect.Controllers
         
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<ActionResult> Delete(int id)
+        public ActionResult Delete(int id)
         {
             Pet pet = db.Pets.Include("Comments")
                                  .Where(pet => pet.PetId == id)
@@ -336,7 +336,7 @@ namespace PetConnect.Controllers
             {
                 db.Pets.Remove(pet);
                 db.SaveChanges();
-                TempData["message"] = "Anuntul  a fost stearsa";
+                TempData["message"] = "Anuntul  a fost stears";
                 return RedirectToAction("Index");
             }
             else

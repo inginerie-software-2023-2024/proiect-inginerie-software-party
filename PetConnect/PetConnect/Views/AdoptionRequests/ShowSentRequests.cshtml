@@ -1,0 +1,27 @@
+﻿@foreach (var adoptionRequest in ViewBag.AdoptionRequests)
+{
+    <div class="card">
+
+        <div class="card-body">
+            <div class="card-text">Cererea de adoptie a lui <a href="/Pets/Show/@adoptionRequest.PetId">@adoptionRequest.Pet.Name</a></div>
+            <div class="card-text">Mesaj</div>
+            <div class="card-text">@adoptionRequest.Message</div>
+            @switch (adoptionRequest.Status)
+            {
+                case 1:
+                    <div class="card-text">Status: In derulare</div>
+                break;
+                case 2:
+                    <div class="card-text">Status: Acceptata</div>
+                break;
+                case 3:
+                    <div class="card-text">Status: Respinsa</div>
+                break;
+            }
+        </div>
+
+    </div>
+
+    <br />
+    <br />
+}

@@ -1,0 +1,24 @@
+﻿@model PetConnect.Models.AdoptionRequest
+
+<br />
+<div class="card">
+    <div class="card-body">
+        <div class="card-text">@Model.Adopter.UserName doreste sa il adopte pe <a href="/Pets/Show/@Model.PetId">@Model.Pet.Name</a>!</div>
+
+        <div class="card-text">Mesaj:</div>
+
+        <div class="card-text">@Model.Message</div>
+
+        <div class="d-flex flex-row justify-content-between">
+            <form action="/AdoptionRequests/ChangeStatus/@Model.RequestId" method="post">
+                <input type="hidden" name="requestStatus" value=2 />
+                <button type="submit" class="btn btn-sm btn-success">Accepta</button>
+            </form>
+
+            <form action="/AdoptionRequests/ChangeStatus/@Model.RequestId" method="post">
+                <input type="hidden" name="requestStatus" value=3 />
+                <button type="submit" class="btn btn-sm btn-danger">Respinge</button>
+            </form>
+        </div>
+    </div>
+</div>
