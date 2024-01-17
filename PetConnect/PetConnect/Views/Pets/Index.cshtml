@@ -3,6 +3,123 @@
 <h2>Afisare animalute</h2>
 <br />
 
+@* Motorul de cautare *@
+
+<form id="searchForm" method="GET">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Cauta aici atributele animalutului..." name="search" value="@ViewBag.SearchString">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </div>
+
+    @{
+        var selectedSpecies = ViewBag.SpeciesFilter;
+        var selectedBreed = ViewBag.BreedFilter;
+        var selectedColor = ViewBag.ColorFilter;
+        var selectedLocation = ViewBag.LocationFilter;
+        var selectedSize = ViewBag.SizeFilter;
+        var selectedAge = ViewBag.AgeFilter;
+        var selectedSex = ViewBag.SexFilter;
+        var selectedSterilized = ViewBag.SterilizeFilter;
+        var selectedVaccined = ViewBag.VaccineFilter;
+    }
+
+    <div style="display: flex; gap: 50px; margin-bottom: 10px;">
+        <select class="form-select" name="speciesFilter" style="width: 200px;">
+            <option value="">Selecteaza specia</option>
+            @foreach (var species in ViewBag.SpeciesList)
+            {
+                <option value="@species" selected="@(species == selectedSpecies)">@(species)</option>
+            }
+        </select>
+
+        <select class="form-select" name="breedFilter" style="width: 200px;">
+            <option value="">Selecteaza rasa</option>
+            @foreach (var breed in ViewBag.BreedsList)
+            {
+                <option value="@breed" selected="@(breed == selectedBreed)">@(breed)</option>
+            }
+        </select>
+
+        <select class="form-select" name="colorFilter" style="width: 200px;">
+            <option value="">Selecteaza culoarea</option>
+            @foreach (var color in ViewBag.ColorList)
+            {
+                <option value="@color" selected="@(color == selectedColor)">@(color)</option>
+            }
+        </select>
+
+        <select class="form-select" name="locationFilter" style="width: 200px;">
+            <option value="">Selecteaza locatia</option>
+            @foreach (var location in ViewBag.LocationList)
+            {
+                <option value="@location" selected="@(location == selectedLocation)">@(location)</option>
+            }
+        </select>
+
+        <select class="form-select" name="sizeFilter" style="width: 200px;">
+            <option value="">Selecteaza marimea</option>
+            @foreach (var size in ViewBag.SizeList)
+            {
+                <option value="@size" selected="@(size == selectedSize)">@(size)</option>
+            }
+        </select>
+
+    </div>
+
+    <div style="display: flex; gap: 50px; margin-bottom: 10px;">
+
+        <select class="form-select" name="ageFilter" style="width: 200px;">
+            <option value="">Selecteaza varsta</option>
+            @foreach (var age in ViewBag.AgeList)
+            {
+                <option value="@age" selected="@(age == selectedAge)">@(age)</option>
+            }
+        </select>
+
+        <select class="form-select" name="sexFilter" style="width: 200px;">
+            <option value="">Selecteaza sexul</option>
+        @foreach (var sex in ViewBag.SexList)
+        {
+                <option value="@sex" selected="@(sex == selectedSex)">@(sex)</option>
+        }
+        </select>
+
+        <select class="form-select" name="sterilizeFilter" style="width: 200px;">
+            <option value="">Status sterilizare</option>
+        @foreach (var st in ViewBag.SterilizeList)
+        {
+                <option value="@st" selected="@(st == selectedSterilized)">@(st)</option>
+        }
+        </select>
+
+            <select class="form-select" name="vaccineFilter" style="width: 200px;">
+                <option value="">Status vaccinare</option>
+                @foreach (var vac in ViewBag.VaccineList)
+                {
+                    <option value="@vac" selected="@(vac == selectedVaccined)">@(vac)</option>
+                }
+            </select>
+
+        </div>
+
+    
+    <button class="btn btn-success" type="submit">Adauga filtrele</button>
+    
+</form>
+
+@if (ViewBag.NullSearchMessage != null)
+{
+    <p>@Html.Raw(ViewBag.NullSearchMessage.Replace("\n", "<br />"))</p>
+}
+
+<script>
+    function submitForm() {
+        document.getElementById("searchForm").submit();
+    }
+</script>
+
+
+
 <div class="flex flex-wrap">
     @foreach (var pet in ViewBag.Pets)
     {
@@ -27,8 +144,12 @@
     }
 </div>
 
-<a href="/Pets/New">Adaugare anunt</a>
-    
+
+<a href="/Pets/New" style="display: inline-block; padding: 25px 25px; margin: 10px; background-color: #fff8e7; color: #2e250d; text-decoration: none; border-radius: 10px;">Adaugare anunt</a>
+
+
+
+@* pagination *@
 <div>
     <nav aria-label="Page navigation example">
         <ul class="pagination">
