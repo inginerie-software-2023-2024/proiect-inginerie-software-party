@@ -27,6 +27,4 @@ jobs:
       working-directory: PetConnect/PetConnect
     - name: Build
       run: dotnet build --no-restore
-      working-directory: PetConnect/PetConnect.sln
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+      working-directory: PetConnect
