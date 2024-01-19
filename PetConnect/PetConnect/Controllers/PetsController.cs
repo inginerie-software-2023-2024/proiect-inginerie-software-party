@@ -409,8 +409,11 @@ namespace PetConnect.Controllers
                 TempData["message"] = "Anuntul a fost adaugat";
                 return RedirectToAction("Index");
             }
-
-            return View();
+            else
+            {
+                return View();
+            }
+            
         }
 
 
@@ -427,30 +430,40 @@ namespace PetConnect.Controllers
         public async Task<IActionResult> UploadImage(Pet pet, IFormFile PetImage)
         {
             var databaseFileName = "";
-            if (PetImage.Length > 0)
-            {
-                // Generam calea de stocare a fisierului
-                var storagePath = Path.Combine(
-                _env.WebRootPath, // Luam calea folderului wwwroot
-                "images", // Adaugam calea folderului images
-                PetImage.FileName // Numele fisierului
-                );
 
-                databaseFileName = "/images/" + PetImage.FileName;
-                // Uploadam fisierul la calea de storage
-                using (var fileStream = new FileStream(storagePath, FileMode.Create))
+            if (PetImage != null)
+            {
+                if (PetImage.Length > 0)
                 {
-                    await PetImage.CopyToAsync(fileStream);
+                    // Generam calea de stocare a fisierului
+                    var storagePath = Path.Combine(
+                    _env.WebRootPath, // Luam calea folderului wwwroot
+                    "images", // Adaugam calea folderului images
+                    PetImage.FileName // Numele fisierului
+                    );
+
+                    databaseFileName = "/images/" + PetImage.FileName;
+                    // Uploadam fisierul la calea de storage
+                    using (var fileStream = new FileStream(storagePath, FileMode.Create))
+                    {
+                        await PetImage.CopyToAsync(fileStream);
+                    }
                 }
+
+
+                //Salvam storagePath-ul in baza de date
+
+                pet.Image = databaseFileName;
+                pet.UserId = _userManager.GetUserId(User);
+                db.Pets.Add(pet);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+               else
+            {
+                return Redirect("/Pets/New/" + pet);
             }
 
-            //Salvam storagePath-ul in baza de date
-
-            pet.Image = databaseFileName;
-            pet.UserId = _userManager.GetUserId(User);
-            db.Pets.Add(pet);
-            db.SaveChanges();
-            return RedirectToAction("Index");
         }
 
      
@@ -514,14 +527,13 @@ namespace PetConnect.Controllers
                         // Actualizați calea imaginii în obiectul Pet
                         pet.Image = "/images/" + PetImage.FileName;
                     }
-                    /*  TempData["message"] = "Anuntul a fost modificat";*/
+                 
                     db.SaveChanges();
 
                     return RedirectToAction("Index");
                 }
                 catch (Exception)
                 {
-                    /*TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui anunt care nu va apartine";*/
                     return RedirectToAction("Index");
                 }
 
