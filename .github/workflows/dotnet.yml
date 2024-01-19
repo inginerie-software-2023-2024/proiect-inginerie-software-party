@@ -4,6 +4,8 @@
 name: .NET
 
 on:
+  workflow_dispatch:
+  
   push:
     branches: [ "main" ]
   pull_request:
@@ -24,5 +26,6 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+      working-directory: PetConnect/PetConnect.sln
     - name: Test
       run: dotnet test --no-build --verbosity normal
