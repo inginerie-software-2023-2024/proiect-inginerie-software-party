@@ -13,10 +13,6 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Babbage_Difference_Engine.jpg",
-      "PackagePath": "staticwebassets\\images\\Babbage_Difference_Engine.jpg"
-    },
-    {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Pet1.jpg",
       "PackagePath": "staticwebassets\\images\\Pet1.jpg"
     },
@@ -53,18 +49,6 @@
       "PackagePath": "staticwebassets\\images\\Profile6.jpg"
     },
     {
-      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Rdfv8KT.png",
-      "PackagePath": "staticwebassets\\images\\Rdfv8KT.png"
-    },
-    {
-      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Turing_Machine_Model_Davey_2012.jpg",
-      "PackagePath": "staticwebassets\\images\\Turing_Machine_Model_Davey_2012.jpg"
-    },
-    {
-      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Untitled.jpg",
-      "PackagePath": "staticwebassets\\images\\Untitled.jpg"
-    },
-    {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\aboutus.png",
       "PackagePath": "staticwebassets\\images\\aboutus.png"
     },
@@ -89,10 +73,6 @@
       "PackagePath": "staticwebassets\\images\\cat3.jpeg"
     },
     {
-      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\g5n88w2bfnbc1.webp",
-      "PackagePath": "staticwebassets\\images\\g5n88w2bfnbc1.webp"
-    },
-    {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\image 17.png",
       "PackagePath": "staticwebassets\\images\\image 17.png"
     },
@@ -111,6 +91,10 @@
     {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\images.jpg",
       "PackagePath": "staticwebassets\\images\\images.jpg"
+    },
+    {
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\turtle.jpg",
+      "PackagePath": "staticwebassets\\images\\turtle.jpg"
     },
     {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\js\\site.js",
