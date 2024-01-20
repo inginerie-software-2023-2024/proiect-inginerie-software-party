@@ -69,7 +69,8 @@ namespace PetConnect.Controllers
 
             //filtrare
 
-            if (Convert.ToString(HttpContext.Request.Query["speciesFilter"]) != null){
+            if (Convert.ToString(HttpContext.Request.Query["speciesFilter"]) != null)
+            {
 
                 speciesFilter = Convert.ToString(HttpContext.Request.Query["speciesFilter"]).Trim();
 
@@ -85,7 +86,7 @@ namespace PetConnect.Controllers
 
             if (Convert.ToString(HttpContext.Request.Query["breedFilter"]) != null)
             {
-   
+
                 breedFilter = Convert.ToString(HttpContext.Request.Query["breedFilter"]).Trim();
 
                 ViewBag.BreedFilter = breedFilter;
@@ -271,7 +272,7 @@ namespace PetConnect.Controllers
             {
                 ViewBag.PaginationBaseUrl = $"/Pets/Index/?speciesFilter={speciesFilter}&breedFilter={breedFilter}&colorFilter={colorFilter}&locationFilter={locationFilter}&ageFilter={ageFilter}&sizeFilter={sizeFilter}&sexFilter={sexFilter}&vaccineFilter={vaccineFilter}&sterilizeFilter={sterilizeFilter}&page";
             }
-            
+
             return View();
 
         }
@@ -280,7 +281,7 @@ namespace PetConnect.Controllers
         public ActionResult Show(int id)
         {/*
             Pet pet = db.Pets.Find(id);*/
-            Pet pet   =  db.Pets.Include("User")
+            Pet pet = db.Pets.Include("User")
                                 .Include("Comments")
                                 .Include("Comments.User")
                                 .Where(pet => pet.PetId == id)
@@ -337,7 +338,7 @@ namespace PetConnect.Controllers
         }
 
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "User,Admin")]
         public IActionResult New()
         {
             Pet pet = new Pet();
@@ -351,7 +352,7 @@ namespace PetConnect.Controllers
 
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "User,Admin")]
         public IActionResult New(Pet pet)
         {
             pet.UserId = _userManager.GetUserId(User);
@@ -409,11 +410,8 @@ namespace PetConnect.Controllers
                 TempData["message"] = "Anuntul a fost adaugat";
                 return RedirectToAction("Index");
             }
-            else
-            {
-                return View();
-            }
-            
+
+            return View();
         }
 
 
@@ -430,44 +428,34 @@ namespace PetConnect.Controllers
         public async Task<IActionResult> UploadImage(Pet pet, IFormFile PetImage)
         {
             var databaseFileName = "";
-
-            if (PetImage != null)
+            if (PetImage.Length > 0)
             {
-                if (PetImage.Length > 0)
+                // Generam calea de stocare a fisierului
+                var storagePath = Path.Combine(
+                _env.WebRootPath, // Luam calea folderului wwwroot
+                "images", // Adaugam calea folderului images
+                PetImage.FileName // Numele fisierului
+                );
+
+                databaseFileName = "/images/" + PetImage.FileName;
+                // Uploadam fisierul la calea de storage
+                using (var fileStream = new FileStream(storagePath, FileMode.Create))
                 {
-                    // Generam calea de stocare a fisierului
-                    var storagePath = Path.Combine(
-                    _env.WebRootPath, // Luam calea folderului wwwroot
-                    "images", // Adaugam calea folderului images
-                    PetImage.FileName // Numele fisierului
-                    );
-
-                    databaseFileName = "/images/" + PetImage.FileName;
-                    // Uploadam fisierul la calea de storage
-                    using (var fileStream = new FileStream(storagePath, FileMode.Create))
-                    {
-                        await PetImage.CopyToAsync(fileStream);
-                    }
+                    await PetImage.CopyToAsync(fileStream);
                 }
-
-
-                //Salvam storagePath-ul in baza de date
-
-                pet.Image = databaseFileName;
-                pet.UserId = _userManager.GetUserId(User);
-                db.Pets.Add(pet);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-               else
-            {
-                return Redirect("/Pets/New/" + pet);
             }
 
+            //Salvam storagePath-ul in baza de date
+
+            pet.Image = databaseFileName;
+            pet.UserId = _userManager.GetUserId(User);
+            db.Pets.Add(pet);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
-     
-        [Authorize(Roles = "Admin")]
+
+        [Authorize(Roles = "User, Admin")]
         public IActionResult Edit(int id)
         {
             Pet pet = db.Pets.Find(id);
@@ -483,11 +471,11 @@ namespace PetConnect.Controllers
                 return RedirectToAction("Index");
             }
 
-           
+
         }
 
-        
-        [Authorize(Roles = "Admin")]
+
+        [Authorize(Roles = "User, Admin")]
         [HttpPost]
         public async Task<ActionResult> Edit(int id, Pet requestPet, IFormFile PetImage)
         {
@@ -527,13 +515,14 @@ namespace PetConnect.Controllers
                         // Actualizați calea imaginii în obiectul Pet
                         pet.Image = "/images/" + PetImage.FileName;
                     }
-                 
+                    /*  TempData["message"] = "Anuntul a fost modificat";*/
                     db.SaveChanges();
 
                     return RedirectToAction("Index");
                 }
                 catch (Exception)
                 {
+                    /*TempData["message"] = "Nu aveti dreptul sa faceti modificari asupra unui anunt care nu va apartine";*/
                     return RedirectToAction("Index");
                 }
 
@@ -542,8 +531,8 @@ namespace PetConnect.Controllers
 
         }
 
-        
-        [Authorize(Roles = "Admin")]
+
+        [Authorize(Roles = "User,Admin")]
         [HttpPost]
         public ActionResult Delete(int id)
         {
@@ -574,7 +563,7 @@ namespace PetConnect.Controllers
 
         public List<string> GetDistinctBreed()
         {
-            return db.Pets.Select(p => p.Breed).Distinct().ToList(); 
+            return db.Pets.Select(p => p.Breed).Distinct().ToList();
         }
 
         public List<string> GetDistinctColor()
@@ -588,12 +577,12 @@ namespace PetConnect.Controllers
 
         public List<string> GetDistinctAge()
         {
-            return db.Pets.Select(p => (p.Age).ToString()).Distinct().ToList(); 
+            return db.Pets.Select(p => (p.Age).ToString()).Distinct().ToList();
         }
 
         public List<string> GetDistinctSize()
         {
-            return db.Pets.Select(p => (p.Size).ToString()).Distinct().ToList(); 
+            return db.Pets.Select(p => (p.Size).ToString()).Distinct().ToList();
         }
 
         public List<string> GetDistinctSex()
@@ -628,7 +617,7 @@ namespace PetConnect.Controllers
 
         public List<string> GetDistinctSterilized()
         {
-            var distinctSterilizedvalues =  db.Pets.Select(p => p.Sterilized).Distinct().ToList();
+            var distinctSterilizedvalues = db.Pets.Select(p => p.Sterilized).Distinct().ToList();
 
             List<string> sterList = new List<string>();
 
