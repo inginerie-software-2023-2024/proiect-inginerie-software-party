@@ -168,3 +168,6 @@ Backlog estimation:
 
 
 ## First Sprint Report [First Sprint Report.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/13956501/First.Sprint.Report.pdf)
+
+## Second Sprint Report [Sprint Report 2.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/14063026/Sprint.Report.2.pdf)
+
