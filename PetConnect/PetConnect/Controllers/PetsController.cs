@@ -396,13 +396,13 @@ namespace PetConnect.Controllers
         }
 
 
+
         [HttpPost]
         [Authorize(Roles = "Admin")]
         public IActionResult Approve(int id)
         {
             Pet pet = db.Pets.Find(id);
             pet.Approved = true;
-
             if (ModelState.IsValid)
             {
                 //db.Books.Add(book);
@@ -410,8 +410,11 @@ namespace PetConnect.Controllers
                 TempData["message"] = "Anuntul a fost adaugat";
                 return RedirectToAction("Index");
             }
+            else
+            {
+                return View();
+            }
 
-            return View();
         }
 
 
@@ -428,30 +431,37 @@ namespace PetConnect.Controllers
         public async Task<IActionResult> UploadImage(Pet pet, IFormFile PetImage)
         {
             var databaseFileName = "";
-            if (PetImage.Length > 0)
+            if (PetImage != null)
             {
-                // Generam calea de stocare a fisierului
-                var storagePath = Path.Combine(
-                _env.WebRootPath, // Luam calea folderului wwwroot
-                "images", // Adaugam calea folderului images
-                PetImage.FileName // Numele fisierului
-                );
-
-                databaseFileName = "/images/" + PetImage.FileName;
-                // Uploadam fisierul la calea de storage
-                using (var fileStream = new FileStream(storagePath, FileMode.Create))
+                if (PetImage.Length > 0)
                 {
-                    await PetImage.CopyToAsync(fileStream);
+                    // Generam calea de stocare a fisierului
+                    var storagePath = Path.Combine(
+                    _env.WebRootPath, // Luam calea folderului wwwroot
+                    "images", // Adaugam calea folderului images
+                    PetImage.FileName // Numele fisierului
+                    );
+
+                    databaseFileName = "/images/" + PetImage.FileName;
+                    // Uploadam fisierul la calea de storage
+                    using (var fileStream = new FileStream(storagePath, FileMode.Create))
+                    {
+                        await PetImage.CopyToAsync(fileStream);
+                    }
                 }
+
+                //Salvam storagePath-ul in baza de date
+
+                pet.Image = databaseFileName;
+                pet.UserId = _userManager.GetUserId(User);
+                db.Pets.Add(pet);
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
-
-            //Salvam storagePath-ul in baza de date
-
-            pet.Image = databaseFileName;
-            pet.UserId = _userManager.GetUserId(User);
-            db.Pets.Add(pet);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            else
+            {
+                return Redirect("/Pets/New/" + pet);
+            }
         }
 
 
@@ -544,7 +554,7 @@ namespace PetConnect.Controllers
             {
                 db.Pets.Remove(pet);
                 db.SaveChanges();
-                TempData["message"] = "Anuntul  a fost stears";
+                TempData["message"] = "Anuntul  a fost sters";
                 return RedirectToAction("Index");
             }
             else

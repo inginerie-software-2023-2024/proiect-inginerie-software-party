@@ -43,7 +43,7 @@ namespace PetConnect.Models
         public bool Sterilized { get; set; }
 
         [Required(ErrorMessage = "Locatia este obligatorie")]
-        [StringLength(200, ErrorMessage = "Locatia nu poate avea mai mult de 200 de caractere")]
+        [StringLength(100, ErrorMessage = "Locatia nu poate avea mai mult de 100 de caractere")]
         public string Location { get; set; }
 
         [Required(ErrorMessage = "Descrierea este obligatorie")]
