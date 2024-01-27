@@ -1,8 +1,6 @@
 ﻿@model PetConnect.Models.Pet
 
 
-
-<h2>Afisare anunt</h2>
 <br />
 
 
@@ -73,27 +71,27 @@
                 <td>@Model.Location</td>
             </tr>
         </table>
-        <a href="/AdoptionRequests/New/@Model.PetId" class="btn btn-success">Adopta</a>
+        <br />
+        <a href="/AdoptionRequests/New/@Model.PetId" class="mt-auto flex items-center justify-center w-full px-8 py-3 text-black bg-custom-yellow rounded-md shadow hover:bg-custom-dark-yellow">Adopta</a>
     </div>
 </div>
-
+<br />
 
 <form method="post" action="/Pets/Delete/@Model.PetId">
 
-    <button type="submit">Sterge anunt</button>
+    <button class="inline-block px-11 py-3 m-2 text-gray-100 bg-yellow-600 rounded-md shadow hover:bg-yellow-500"  type="submit">Sterge anunt</button>
 
 </form>
 
+
+<a href="/Pets/Index" class="inline-block px-11 py-3 m-2 text-gray-100 bg-yellow-600 rounded-md shadow hover:bg-yellow-500">Afisare anunturi</a>
+
+<br />  
 <br />
 <form method="post" action="@Url.Action("StartConversation", "Message")">
     <input type="hidden" name="otherUserId" value="@Model.UserId" />
     <button type="submit" class="btn btn-primary" >Începe conversație</button>
 </form>
-
-
-<a href="/Pets/Index">Afisare anunturi</a>
-
-
 
 @foreach (var comm in Model.Comments)
 {
@@ -115,25 +113,24 @@
 
                 @if (comm.UserId == ViewBag.UserCurent || ViewBag.EsteAdmin)
                 {
-                    <div class="d-flex">
+                    <div class="d-flex align-items-center">
 
                         <div>
-
-                            <a class="btn btn-outline-primary" href="/Comments/Edit/@comm.Id"><i class="bi bi-pencil-square"></i>Editeaza</a>
-
+                            <a class="px-5 py-2 m-2 text-yellow-600 border border-yellow-600 rounded-md hover:bg-yellow-500 hover:text-white focus:outline-none" href="/Comments/Edit/@comm.Id">
+                                <i class="bi bi-pencil-square"></i>Editeaza
+                            </a>
                         </div>
 
                         <div>
-
                             <form method="post" action="/Comments/Delete/@comm.Id">
-
-                                <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Sterge</button>
-
+                                <button class="px-5 py-2 m-2 text-yellow-600 border border-yellow-600 rounded-md hover:bg-yellow-500 hover:text-white focus:outline-none" type="submit">
+                                    <i class="bi bi-trash"></i>Sterge
+                                </button>
                             </form>
-
                         </div>
 
                     </div>
+
 
 
                 }
@@ -150,15 +147,15 @@
 }
 @if (ViewBag.EsteAdmin || ViewBag.EsteUser)
 {
-    <div class="container">
+    <div class="container ">
 
-        <div class="row">
+        <div class="row ">
 
             <div class="col-md-2"></div>
 
             <div class="col-md-8">
 
-                <div class="card">
+                <div class="card bg-custom-background">
 
                     <form method="post" action="/Pets/Show/@Model.PetId">
 
@@ -173,9 +170,9 @@
 
                             @Html.ValidationMessage("Content", null, new { @class = "text-danger"})
 
-                            <br /><br />
+                            <br />
 
-                            <button class="btn btn-primary " type="submit">Adauga comentariul</button>
+                            <button class="inline-block px-11 py-3 m-2 text-gray-100 bg-yellow-600 rounded-md shadow hover:bg-yellow-500" type="submit">Adauga comentariul</button>
 
                         </div>
 
@@ -191,4 +188,18 @@
 
     </div>
 }
+
+<style>
+    .bg-custom-background {
+        background-color: #FEF3C7; 
+    }
+    .bg-custom-yellow {
+        background-color: #FDE68A; 
+    }
+
+    .hover\:bg-custom-dark-yellow:hover {
+        background-color: #FEF3C7; 
+    }
+</style>
+
 
