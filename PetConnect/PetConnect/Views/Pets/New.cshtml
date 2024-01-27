@@ -1,19 +1,10 @@
 ﻿@model PetConnect.Models.Pet
 
-<h2 class="text-center mt-5">Adaugare anunt</h2>
 <br />
-
-@* @if (ViewBag.Message != null)
-{
-    <h2 class="alert-success p-3 rounded-3 text-center mb-5">@ViewBag.Message</h2>
-} *@
-
-
 <div class="container mt-5">
     <div class="row">
-        <div class="col-6 offset-3">
+        <div class="col-6 offset-3 bg-custom-background">
 
-          
             @using (Html.BeginForm("UploadImage", "Pets", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 @Html.AntiForgeryToken()
@@ -102,16 +93,23 @@
                     @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
                 </div>
 
-                <h1> Nu uitati sa adaugati o poza cu animalutul! </h1>
+                
 
                 <br />
+                <h1> Nu uitati sa adaugati o poza cu animalutul! </h1>
                 <input class="form-control" type="file" name="PetImage" />
                 <br />
 
                 <div class="form-group">
-                    <button class="btn btn-success" type="submit">Adauga pet</button>
+                    <button class="inline-block px-8 py-3 m-2 text-gray-100 bg-yellow-600 rounded-md shadow hover:bg-yellow-500" type="submit">Adauga pet</button>
                 </div>
             }
         </div>
     </div>
 </div>
+
+<style>
+    .bg-custom-background {
+        background-color: #FEF3C7;
+    }
+</style>
