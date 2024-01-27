@@ -85,6 +85,10 @@
 </form>
 
 <br />
+<form method="post" action="@Url.Action("StartConversation", "Message")">
+    <input type="hidden" name="otherUserId" value="@Model.UserId" />
+    <button type="submit" class="btn btn-primary" >Începe conversație</button>
+</form>
 
 
 <a href="/Pets/Index">Afisare anunturi</a>

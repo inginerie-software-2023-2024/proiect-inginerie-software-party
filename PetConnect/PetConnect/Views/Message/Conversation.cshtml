@@ -1,0 +1,155 @@
+﻿@model PetConnect.Models.Chat
+
+@if (@Model.OtherUserId != ViewBag.UserId)
+{
+    <div id="conversationContainer" class="p-4 w-4/5 border rounded-lg mx-auto">
+    <h2>Conversație cu @Model.OtherUserName</h2>
+    
+
+    <div id="messageContainer" >
+        <ul id="messageList" >
+            @foreach (var message in @Model.Messages)
+            {
+
+                if (message.Content != null)
+                {
+
+                    @if (message.UserId == Model.CurrentUserId)
+                    {
+                        <div class="flex justify-end mb-4">
+                            <div class="mr-2 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white">
+                                @message.Content
+                            </div>
+                            <p>: @Model.CurrentUserName</p>
+                        </div>
+
+                    
+                    }
+                    else
+                    {
+
+                        <div class="flex justify-start mb-4">
+                            <p>@Model.OtherUserName: </p>
+                            <div class="ml-2 py-3 px-4 bg-gray-400 rounded-br-3xl rounded-tr-3xl rounded-tl-xl text-white">
+                                @message.Content
+                            </div>
+                        </div>
+                        
+                    }
+                    
+                }           
+            }
+        </ul>
+
+        <div class="bg-white border-t border-gray-300 p-4">
+           <div class="flex items-center" >
+                <input type="text" placeholder="Type a message..." class="w-full p-2 rounded-md border border-gray-400 focus:outline-none focus:border-blue-500" id="messageInput">
+                <button class="bg-indigo-500 text-white px-4 py-2 rounded-md ml-2" onclick="sendMessage1()">Trimite mesaj</button>
+            </div>
+         </div>
+
+       @* <input type="text" id="messageInput" />
+        <button onclick="sendMessage1()">Trimite mesaj</button>*@
+    </div>
+    </div>
+}
+else{
+    <div id="conversationContainer" class="p-4 w-4/5 border rounded-lg mx-auto">
+    <h2>Conversație cu @Model.CurrentUserName</h2>
+    
+    <div id="messageContainer">
+        <ul id="messageList">
+            @foreach (var message in @Model.Messages)
+            {
+                if (message.Content!=null){
+                    @if (message.UserId == Model.CurrentUserId)
+                
+                    
+                    
+                    {
+                        <div class="flex justify-start mb-4">
+                            <p>@Model.CurrentUserName: </p>
+                            <div class="ml-2 py-3 px-4 bg-gray-400 rounded-br-3xl rounded-tr-3xl rounded-tl-xl text-white">
+                                @message.Content
+                            </div>
+                        </div>
+                       
+                    }
+                    else
+                    {
+                        <div class="flex justify-end mb-4">
+                            <div class="mr-2 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white">
+                                @message.Content
+                            </div>
+                            <p>: @Model.OtherUserName</p>
+                        </div>
+                       
+                    }
+              
+                }
+            }
+        </ul>
+        <div class="bg-white border-t border-gray-300 p-4">
+            <div class="flex items-center">
+                <input type="text" placeholder="Type a message..." class="w-full p-2 rounded-md border border-gray-400 focus:outline-none focus:border-blue-500" id="messageInput">
+                <button class="bg-indigo-500 text-white px-4 py-2 rounded-md ml-2" onclick="sendMessage2()">Trimite mesaj</button>
+            </div>
+        </div>
+        @*<input type="text" id="messageInput" />
+        <button onclick="sendMessage2()">Trimite mesaj</button>*@
+    </div>
+    </div>
+}
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+<script>
+    var connection = new signalR.HubConnectionBuilder().withUrl("/ChatHub").build();
+
+    connection.on("ReceiveMessage", function (senderName, content) {
+       
+        $("#messageList").append('<div class="flex justify-start mb-4">' +
+            '<strong class="text-sm font-medium text-gray-600">' + senderName + ': </strong>' +
+            '<div class="ml-2 py-3 px-4 bg-gray-400 rounded-br-3xl rounded-tr-3xl rounded-tr-xl text-white">' + content + '</div>' +
+            '</div>');
+
+
+    });
+
+    connection.start().catch(function (err) {
+        console.error(err.toString());
+    });
+
+    function sendMessage1() {
+        var otherUserId = "@Model.OtherUserId"; // ID-ul utilizatorului cu care se desfasoara conversatia
+        var content = $("#messageInput").val();
+        
+        connection.invoke("SendMessage", otherUserId, content).catch(function (err) {
+            console.error(err.toString());
+        });
+
+        $("#messageList").append('<div class="flex justify-end mb-4 mr-40">' +
+            '<div class="mr-30 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white">' + content + '</div>' +
+            '<strong class="text-sm font-medium text-gray-600"> :Eu </strong>' +
+            '</div>');
+
+       
+        $("#messageInput").val("");
+    }
+
+    function sendMessage2() {
+        var otherUserId = "@Model.CurrentUserId"; // ID-ul utilizatorului cu care se desfasoara conversatia
+        var content = $("#messageInput").val();
+
+        connection.invoke("SendMessage", otherUserId, content).catch(function (err) {
+            console.error(err.toString());
+        });
+
+        $("#messageList").append('<div class="flex justify-end mb-4 mr-40">' +
+            '<div class="mr-30 py-3 px-4 bg-blue-400 rounded-bl-3xl rounded-tl-3xl rounded-tr-xl text-white">' + content + '</div>' +
+            '<strong class="text-sm font-medium text-gray-600"> :Eu </strong>' +
+            '</div>');
+       
+
+
+        $("#messageInput").val("");
+    }
+</script>

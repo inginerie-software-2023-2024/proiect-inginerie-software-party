@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\PetConnect.csproj": {}
+    "C:\\Users\\crist\\Desktop\\Facultate\\Github_respositories\\PetConnect\\PetConnect\\PetConnect\\PetConnect.csproj": {}
   },
   "projects": {
-    "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\PetConnect.csproj": {
+    "C:\\Users\\crist\\Desktop\\Facultate\\Github_respositories\\PetConnect\\PetConnect\\PetConnect\\PetConnect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\PetConnect.csproj",
+        "projectUniqueName": "C:\\Users\\crist\\Desktop\\Facultate\\Github_respositories\\PetConnect\\PetConnect\\PetConnect\\PetConnect.csproj",
         "projectName": "PetConnect",
-        "projectPath": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\PetConnect.csproj",
-        "packagesPath": "C:\\Users\\Diana\\.nuget\\packages\\",
-        "outputPath": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\obj\\",
+        "projectPath": "C:\\Users\\crist\\Desktop\\Facultate\\Github_respositories\\PetConnect\\PetConnect\\PetConnect\\PetConnect.csproj",
+        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\crist\\Desktop\\Facultate\\Github_respositories\\PetConnect\\PetConnect\\PetConnect\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Diana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -53,6 +53,10 @@
               "version": "[6.0.10, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Common": {
               "target": "Package",
               "version": "[6.0.10, )"
             },
@@ -94,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.417\\RuntimeIdentifierGraph.json"
         }
       }
     }
