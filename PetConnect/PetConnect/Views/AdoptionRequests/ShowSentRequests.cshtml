@@ -1,27 +1,45 @@
-﻿@foreach (var adoptionRequest in ViewBag.AdoptionRequests)
-{
-    <div class="card">
+﻿<div class="flex flex-wrap bg-custom-background">
+    @foreach (var adoptionRequest in ViewBag.AdoptionRequests)
+    {
+        <div class="relative flex flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-md w-80 m-4">
 
-        <div class="card-body">
-            <div class="card-text">Cererea de adoptie a lui <a href="/Pets/Show/@adoptionRequest.PetId">@adoptionRequest.Pet.Name</a></div>
-            <div class="card-text">Mesaj</div>
-            <div class="card-text">@adoptionRequest.Message</div>
-            @switch (adoptionRequest.Status)
-            {
-                case 1:
-                    <div class="card-text">Status: In derulare</div>
-                break;
-                case 2:
-                    <div class="card-text">Status: Acceptata</div>
-                break;
-                case 3:
-                    <div class="card-text">Status: Respinsa</div>
-                break;
-            }
+            <a href="/Pets/Show/@adoptionRequest.PetId">
+                <div class="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
+                    <img src="@adoptionRequest.Pet.Image" alt="Pet Image" class="w-full h-41 object-cover">
+                </div>
+                <div class="p-6">
+                    <h4 class="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                        @adoptionRequest.Pet.Name
+                    </h4>
+                    <div class="flex justify-between">
+                        <span class="text-md mt-2 text-gray-900">@(adoptionRequest.Pet.Sex ? "Mascul" : "Femela")</span>
+                        <span class="text-md mt-2 text-gray-900">@adoptionRequest.Pet.Age @(adoptionRequest.Pet.Age == 1 ? "An" : "Ani")</span>
+                    </div>
+                    <div class="flex justify-between mt-3">
+                        <span class="text-md mt-2 text-gray-900">Status</span>
+                        @switch (adoptionRequest.Status)
+                        {
+                            case 1:
+                                <span class="text-md mt-2 text-yellow-500 font-bold">@(adoptionRequest.Status == 1 ? "In asteptare" : null)</span>
+                                break;
+                            case 2:
+                                <span class="text-md mt-2 text-green-500 font-bold">@(adoptionRequest.Status == 2 ? "Acceptata" : null)</span>
+                                break;
+                            case 3:
+                                <span class="text-md mt-2 text-red-500 font-bold">@(adoptionRequest.Status == 3 ? "Respinsa" : null)</span>
+                                break;
+                        }
+                    </div>
+                </div>
+            </a>
+
+            <a href="/AdoptionRequests/Show/@adoptionRequest.RequestId"
+               class="ml-4 mb-4 font-semibold self-start inline-flex items-center justify-center px-2 py-2 text-gray-100 hover:text-gray-100 bg-yellow-600 rounded-md shadow">
+                Vezi mai mult
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+            </a>
         </div>
-
-    </div>
-
-    <br />
-    <br />
-}
+    }
+</div>
