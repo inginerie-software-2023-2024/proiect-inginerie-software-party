@@ -1,27 +1,49 @@
-﻿@model PetConnect.Models.AdoptionRequest
+@model PetConnect.Models.AdoptionRequest
+
 
 <h2 class="text-center mt-5 text-3xl">Completeaza cererea de adoptie</h2>
 <br />
 <div class="container mt-5">
     <div class="row">
-        <div class="col-6 offset-3">
+        <div class="col-8 offset-2 bg-custom-background text-center p-4 rounded">
             @using (Html.BeginForm("New", "AdoptionRequests", FormMethod.Post))
             {
-                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
-
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <br />
+            
                 <div class="form-group">
+
                     @Html.LabelFor(m => m.Message, "Mesaj pentru proprietar", new { @class = "text-xl mb-4" })
                     <br />
                     @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
                     @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
                 </div>
+                <br />
+                @Html.HiddenFor(m => m.PetId);
 
-                @Html.HiddenFor(m => m.PetId)
-
-                <div class="form-group flex justify-center">
-                    <button class="mt-6 font-semibold self-start inline-flex items-center justify-center px-2 py-2 text-gray-100 hover:text-gray-100 bg-yellow-600 rounded-md shadow" type="submit">Trimite cererea</button>
+                <div class="form-group">
+                    <button class="inline-block px-11 py-3 m-2 text-gray-100 bg-yellow-600 rounded-md shadow hover:bg-yellow-500" type="submit">Trimite cerere</button>
                 </div>
             }
         </div>
     </div>
 </div>
+
+<style>
+    .custom-label {
+        font-size: 30px;
+        font-weight: bold;
+        color: #D97706;
+    }
+    .bg-custom-background {
+        background-color: #FEF3C7;
+    }
+
+    .bg-custom-yellow {
+        background-color: #FDE68A;
+    }
+
+    .hover\:bg-custom-dark-yellow:hover {
+        background-color: #FEF3C7;
+    }
+</style>

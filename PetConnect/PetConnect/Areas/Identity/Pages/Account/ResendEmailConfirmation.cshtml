@@ -1,0 +1,46 @@
+﻿@page
+@model ResendEmailConfirmationModel
+@{
+    ViewData["Title"] = "Resend email confirmation";
+}
+<br />
+
+<h2 class="text-center" style="font-size: 20px; color: #D97706; font-weight: bold; margin-top: 20px; margin-bottom: 20px;">Introduceti-va mail-ul pentru a primi confirmarea</h2>
+<hr />
+<br />
+<div class="row justify-content-center">
+    <div class="col-md-7 m-7 bg-custom-background">
+        <br />
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-floating">
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                <label asp-for="Input.Email" class="form-label"></label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="inline-block w-100 px-10 py-3 m-4 text-gray-100 bg-yellow-600 rounded-md shadow hover:bg-yellow-500">Retrimite Confirmarea</button>
+            </div>
+
+        </form>
+        <br />
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+<style>
+    .bg-custom-background {
+        background-color: #FEF3C7;
+    }
+
+    .bg-custom-yellow {
+        background-color: #FDE68A;
+    }
+
+    .hover\:bg-custom-dark-yellow:hover {
+        background-color: #FEF3C7;
+    }
+</style>

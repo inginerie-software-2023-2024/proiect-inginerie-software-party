@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PetConnect.Data;
 using PetConnect.Models;
+using PetConnect.Areas.Identity.Data;
 using PetConnect.Hubs;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
