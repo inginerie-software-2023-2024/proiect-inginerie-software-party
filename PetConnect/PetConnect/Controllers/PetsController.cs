@@ -242,7 +242,7 @@ namespace PetConnect.Controllers
 
             int _perPage = 12; //numarul pe articole per pagina
 
-            if (TempData.ContainsKey("message"))
+            if (TempData.ContainsKey("message") && TempData["message"] != null)
             {
                 ViewBag.message = TempData["message"].ToString();
             }
@@ -279,8 +279,7 @@ namespace PetConnect.Controllers
 
 
         public ActionResult Show(int id)
-        {/*
-            Pet pet = db.Pets.Find(id);*/
+        {
             Pet pet = db.Pets.Include("User")
                                 .Include("Comments")
                                 .Include("Comments.User")
@@ -549,19 +548,27 @@ namespace PetConnect.Controllers
             Pet pet = db.Pets.Include("Comments")
                                  .Where(pet => pet.PetId == id)
                                  .First();
-
-            if (pet.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            if (pet.AdoptionRequests != null && pet.AdoptionRequests.Any())
             {
-                db.Pets.Remove(pet);
-                db.SaveChanges();
-                TempData["message"] = "Anuntul  a fost sters";
-                return RedirectToAction("Index");
+                if (pet.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+                {
+                    db.Pets.Remove(pet);
+                    db.SaveChanges();
+                    TempData["message"] = "Anuntul  a fost sters";
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    TempData["message"] = "Nu aveti dreptul sa stergeti un anunt care nu va apartine";
+                    return RedirectToAction("Index");
+                }
             }
             else
             {
-                TempData["message"] = "Nu aveti dreptul sa stergeti un anunt care nu va apartine";
+                TempData["message"] = "Nu puteti sterge un anunt care are cereri de adoptie";
                 return RedirectToAction("Index");
             }
+                
         }
 
 
