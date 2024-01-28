@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PetConnect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5c0186042da1576e7844b400e98dda62ad87a63")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f06a5a8bbb2cae2a31c26be9f45f617a35c7d195")]
 [assembly: System.Reflection.AssemblyProductAttribute("PetConnect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PetConnect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

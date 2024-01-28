@@ -93,6 +93,10 @@
       "PackagePath": "staticwebassets\\images\\images.jpg"
     },
     {
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\profile_pic.jpg",
+      "PackagePath": "staticwebassets\\images\\profile_pic.jpg"
+    },
+    {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\turtle.jpg",
       "PackagePath": "staticwebassets\\images\\turtle.jpg"
     },
@@ -327,6 +331,14 @@
     {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js",
+      "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.js"
+    },
+    {
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js",
+      "PackagePath": "staticwebassets\\lib\\microsoft\\signalr\\dist\\browser\\signalr.min.js"
     },
     {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\lib\\tailwindcss\\base.css",

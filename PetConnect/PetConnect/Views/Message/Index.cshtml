@@ -1,0 +1,19 @@
+﻿
+@foreach (PetConnect.Models.Chat chat in ViewBag.Chats)
+{
+    @if (chat.OtherUserName == ViewBag.CurrentUserName)
+    {
+        <a href="@Url.Action("Conversation", "Message", new { otherUserId = chat.CurrentUserId })">
+            <div class="card p-3 mb-3">
+            <div class="card-text">UserName: @Html.Raw(chat.CurrentUserName)</div>
+            </div>
+        </a>
+    }
+    else{
+    <a href="@Url.Action("Conversation", "Message", new { otherUserId = chat.OtherUserId })">
+         <div class="card p-3 mb-3">
+        <div class="card-text">UserName: @Html.Raw(chat.OtherUserName)</div>
+        </div>
+    </a>
+    }
+}

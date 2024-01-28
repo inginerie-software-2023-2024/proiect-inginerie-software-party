@@ -1,22 +1,15 @@
-﻿@foreach (var adoptionRequest in ViewBag.AdoptionRequests)
-{
-    <div class="card">
+﻿<ul class="max-w-2xl flex flex-col divide-y divide-gray-200 dark:divide-gray-700 mr-auto ml-auto">
+    @foreach (var adoptionRequest in ViewBag.AdoptionRequests)
+    {
+        <li class="inline-flex items-center gap-x-2 py-3 text-sm font-medium text-gray-800 dark:text-white justify-around">
+            <p class="text-base">Ai primit o cerere de adoptie pentru <a class="font-semibold" href="/Pets/Show/@adoptionRequest.PetId">@adoptionRequest.Pet.Name</a> de la @adoptionRequest.Adopter.UserName</p>
+            <a class="font-semibold self-start inline-flex items-center justify-center px-2 py-2 text-gray-100 hover:text-gray-100 bg-yellow-600 rounded-md shadow" href="/AdoptionRequests/Show/@adoptionRequest.RequestId">
+                Vezi mai mult
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+            </a>
+        </li>
+    }
+</ul>
 
-        <div class="card-body">
-
-            <div class="card-text">@adoptionRequest.Adopter.UserName doreste sa il adopte pe <a href="/Pets/Show/@adoptionRequest.PetId">@adoptionRequest.Pet.Name</a>!</div>
-        </div>
-
-        <div class="d-flex justify-content-between flex-row mt-5">
-
-            <a class="btn btn-success" href="/AdoptionRequests/Show/@adoptionRequest.RequestId">Afla mai multe</a>
-
-            <span class="card-text">@adoptionRequest.RequestDate</span>
-        </div>
-
-    </div>
-
-
-    <br />
-    <br />
-}

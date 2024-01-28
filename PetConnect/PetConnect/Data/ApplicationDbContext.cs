@@ -16,7 +16,7 @@ namespace PetConnect.Data
         public DbSet<Comment> Comments { get; set; }
         public DbSet<AdoptionRequest> AdoptionRequests { get; set; }
 
-
-
+        public DbSet<Chat> Chats { get; set; }
+        public DbSet<Message> Messages { get; set; }
     }
 }
