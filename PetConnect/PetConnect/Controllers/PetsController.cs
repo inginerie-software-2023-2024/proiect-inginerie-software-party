@@ -273,6 +273,8 @@ namespace PetConnect.Controllers
                 ViewBag.PaginationBaseUrl = $"/Pets/Index/?speciesFilter={speciesFilter}&breedFilter={breedFilter}&colorFilter={colorFilter}&locationFilter={locationFilter}&ageFilter={ageFilter}&sizeFilter={sizeFilter}&sexFilter={sexFilter}&vaccineFilter={vaccineFilter}&sterilizeFilter={sterilizeFilter}&page";
             }
 
+            SetAccessRights();
+
             return View();
 
         }
@@ -469,7 +471,6 @@ namespace PetConnect.Controllers
         public IActionResult Edit(int id)
         {
             Pet pet = db.Pets.Find(id);
-            string currentUserId = _userManager.GetUserId(User);
 
             if (pet.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
             {
@@ -490,8 +491,8 @@ namespace PetConnect.Controllers
         public async Task<ActionResult> Edit(int id, Pet requestPet, IFormFile PetImage)
         {
             Pet pet = db.Pets.Find(id);
-            string currentUserId = _userManager.GetUserId(User);
-            if (currentUserId == pet.UserId || User.IsInRole("Admin"))
+
+            if (pet.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
             {
                 try
                 {

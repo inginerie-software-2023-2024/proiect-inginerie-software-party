@@ -8,20 +8,23 @@
     <img class="object-cover w-full md:w-1/2 rounded-t-lg h-70 md:h-auto md:rounded-none md:rounded-l-lg" src="@Model.Image" alt="Pet Image">
     <div class="flex flex-col justify-between p-4 w-full md:w-1/2 leading-normal">
         <h3 class="text-2xl font-bold mb-4">@Model.Name</h3>
-        <div class="flex justify-start mb-3">
-            <a href="/AdoptionRequests/New/@Model.PetId" class="mt-auto mr-10 flex font-semibold items-center justify-center px-4 py-2 text-black bg-custom-yellow rounded-md shadow hover:bg-custom-dark-yellow">Adopta</a>
+        @if (ViewBag.EsteUser && ViewBag.UserCurent != Model.UserId)
+        {
+            <div class="flex justify-start mb-3">
 
-            <form method="post" action="@Url.Action("StartConversation", "Message")">
-                <input type="hidden" name="otherUserId" value="@Model.UserId" />
-                <button type="submit" class="mt-auto flex font-semibold items-center justify-center px-4 py-2 text-black bg-custom-yellow rounded-md shadow hover:bg-custom-dark-yellow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-3">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
-                    </svg>
-                    Începe conversație
-                </button>
-            </form>
-        </div>
+                <a href="/AdoptionRequests/New/@Model.PetId" class="mt-auto mr-10 flex font-semibold items-center justify-center px-4 py-2 text-black bg-custom-yellow rounded-md shadow hover:bg-custom-dark-yellow">Adopta</a>
 
+                <form method="post" action="@Url.Action("StartConversation", "Message")">
+                    <input type="hidden" name="otherUserId" value="@Model.UserId" />
+                    <button type="submit" class="mt-auto flex font-semibold items-center justify-center px-4 py-2 text-black bg-custom-yellow rounded-md shadow hover:bg-custom-dark-yellow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-3">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 0 1-2.555-.337A5.972 5.972 0 0 1 5.41 20.97a5.969 5.969 0 0 1-.474-.065 4.48 4.48 0 0 0 .978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25Z" />
+                        </svg>
+                        Începe conversație
+                    </button>
+                </form>
+            </div>
+        }
         <table class="table-auto">
             <tr>
                 <td><strong>Specie</strong></td>
@@ -132,8 +135,6 @@
                         </div>
 
                     </div>
-
-
 
                 }
                 <br />
