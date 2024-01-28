@@ -1,24 +1,49 @@
 ﻿@model PetConnect.Models.AdoptionRequest
 
 <br />
-<div class="card">
-    <div class="card-body">
-        <div class="card-text">@Model.Adopter.UserName doreste sa il adopte pe <a href="/Pets/Show/@Model.PetId">@Model.Pet.Name</a>!</div>
 
-        <div class="card-text">Mesaj:</div>
 
-        <div class="card-text">@Model.Message</div>
+<div class="flex flex-col items-center bg-white border border-gray-400 rounded-lg shadow md:flex-row md:max-w-screen-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 ml-auto mr-auto">
+    <img class="object-cover w-full md:w-1/2 rounded-t-lg h-70 md:h-auto md:rounded-none md:rounded-l-lg" src="@Model.Pet.Image" alt="Pet Image">
+    <div class="flex flex-col justify-between p-4 w-full md:w-1/2 leading-normal">
+        <h3 class="text-3xl font-bold mb-5 ml-auto mr-auto">Cererea de adoptie pentru @Model.Pet.Name</h3>
+        <h3 class="text-xl font-semibold mb-4">@(ViewBag.currentUserId == Model.Pet.UserId? "Mesaj de la " + @Model.Adopter.UserName : "Mesaj catre proprietar"):</h3>
+        <p class="mb-4">
+            @Model.Message
+        </p>
+        @if (ViewBag.isAdmin || ViewBag.currentUserId == Model.AdopterId)
+        {
+            <h3 class="text-xl font-semibold mb-4">Proprietar: @Model.Pet.User.UserName</h3>
+        }
+        <h3 class="text-xl font-semibold mb-4">
+            Status:
+            @switch (@Model.Status)
+            {
+                case 1:
+                    <span class="text-md mt-2 text-yellow-500 font-bold">@(Model.Status == 1 ? "In asteptare" : null)</span>
+                    break;
+                case 2:
+                    <span class="text-md mt-2 text-green-500 font-bold">@(Model.Status == 2 ? "Acceptata" : null)</span>
+                    break;
+                case 3:
+                    <span class="text-md mt-2 text-red-500 font-bold">@(Model.Status == 3 ? "Respinsa" : null)</span>
+                    break;
+            }
+        </h3>
+        @if (ViewBag.isAdmin || ViewBag.currentUserId == Model.Pet.UserId)
+        {
+            <div class="flex justify-around">
+                <form action="/AdoptionRequests/ChangeStatus/@Model.RequestId" method="post">
+                    <input type="hidden" name="requestStatus" value=2 />
+                    <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Accepta</button>
+                </form>
 
-        <div class="d-flex flex-row justify-content-between">
-            <form action="/AdoptionRequests/ChangeStatus/@Model.RequestId" method="post">
-                <input type="hidden" name="requestStatus" value=2 />
-                <button type="submit" class="btn btn-sm btn-success">Accepta</button>
-            </form>
-
-            <form action="/AdoptionRequests/ChangeStatus/@Model.RequestId" method="post">
-                <input type="hidden" name="requestStatus" value=3 />
-                <button type="submit" class="btn btn-sm btn-danger">Respinge</button>
-            </form>
-        </div>
+                <form action="/AdoptionRequests/ChangeStatus/@Model.RequestId" method="post">
+                    <input type="hidden" name="requestStatus" value=3 />
+                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Respinge</button>
+                </form>
+            </div>
+        }
+        <br />
     </div>
 </div>

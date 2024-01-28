@@ -57,6 +57,7 @@ namespace PetConnect.Controllers
         {
             var adoptionRequest = _db.AdoptionRequests.Include("Adopter")
                                                       .Include("Pet")
+                                                      .Include("Pet.User")
                                                       .Where(ar => ar.RequestId == id)
                                                       .First();
 
@@ -66,8 +67,14 @@ namespace PetConnect.Controllers
             }
 
             var currentUserId = _userManager.GetUserId(User);
-            if (User.IsInRole("Admin") || currentUserId == adoptionRequest.Pet.UserId)
+            var isAdmin = User.IsInRole("Admin");
+
+            if (isAdmin || 
+                currentUserId == adoptionRequest.Pet.UserId || 
+                currentUserId == adoptionRequest.AdopterId)
             {
+                ViewBag.isAdmin = isAdmin;
+                ViewBag.CurrentUserId = currentUserId;
                 return View(adoptionRequest);
             }
 

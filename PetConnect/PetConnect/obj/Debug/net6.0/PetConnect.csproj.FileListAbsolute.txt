@@ -224,3 +224,7 @@ C:\Users\crist\Desktop\Facultate\Github_respositories\PetConnect\PetConnect\PetC
 C:\Users\crist\Desktop\Facultate\Github_respositories\PetConnect\PetConnect\PetConnect\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Common.dll
 C:\Users\crist\Desktop\Facultate\Github_respositories\PetConnect\PetConnect\PetConnect\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
 C:\Users\crist\Desktop\Facultate\Github_respositories\PetConnect\PetConnect\PetConnect\bin\Debug\net6.0\System.IO.Pipelines.dll
+D:\Info\Facultate\Anul3\IS\proiect-inginerie-software-party\PetConnect\PetConnect\bin\Debug\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+D:\Info\Facultate\Anul3\IS\proiect-inginerie-software-party\PetConnect\PetConnect\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Common.dll
+D:\Info\Facultate\Anul3\IS\proiect-inginerie-software-party\PetConnect\PetConnect\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
+D:\Info\Facultate\Anul3\IS\proiect-inginerie-software-party\PetConnect\PetConnect\bin\Debug\net6.0\System.IO.Pipelines.dll
