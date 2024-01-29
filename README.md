@@ -167,9 +167,13 @@ Backlog estimation:
 ![backlogEstimation](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/assets/92121071/2b765935-d5e9-4d0b-95be-fb4a5e283728)
 
 
-## First Sprint Report [First Sprint Report.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/13956501/First.Sprint.Report.pdf)
+## First Sprint Report [Sprint Report 1.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/14090372/Sprint.Report.1.pdf)
 
-## Second Sprint Report [Sprint Report 2.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/14063026/Sprint.Report.2.pdf)
+## Sprint Report [Sprint Report (Holiday).pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/14090381/Sprint.Report.Holiday.pdf)
+
+## Second Sprint Report [Sprint Report 2.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/14090382/Sprint.Report.2.pdf)
+
+## Third Sprint Report [Sprint Report 3.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/files/14090383/Sprint.Report.3.pdf)
 
 ## Software Architecture Report [Architecture_Report.pdf](https://github.com/inginerie-software-2023-2024/proiect-inginerie-software-party/blob/main/Architecture_Report.pdf)
 
