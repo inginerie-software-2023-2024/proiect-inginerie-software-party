@@ -9,7 +9,7 @@ using System.Data;
 
 namespace PetConnect.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    
     public class UsersController : Controller
     {
         private readonly ApplicationDbContext db;
@@ -30,6 +30,7 @@ namespace PetConnect.Controllers
 
             _roleManager = roleManager;
         }
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             var users = from user in db.Users
@@ -41,6 +42,7 @@ namespace PetConnect.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Show(string id)
         {
             ApplicationUser user = db.Users.Find(id);
@@ -51,6 +53,7 @@ namespace PetConnect.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> Edit(string id)
         {
             ApplicationUser user = db.Users.Find(id);
@@ -69,6 +72,7 @@ namespace PetConnect.Controllers
             return View(user);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult> Edit(string id, ApplicationUser newData, [FromForm] string newRole)
         {
@@ -104,7 +108,77 @@ namespace PetConnect.Controllers
             return RedirectToAction("Index");
         }
 
+        // EditProfile pentru editarea profilului
+        public async Task<IActionResult> EditProfile()
+        {
+            // Obține utilizatorul autentificat
+            ApplicationUser user = await _userManager.GetUserAsync(User);
 
+            // Verifică dacă utilizatorul există
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            // Pasează utilizatorul la view
+            return View(user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditProfile(ApplicationUser newData)
+        {
+            // Obține utilizatorul autentificat
+            ApplicationUser user = await _userManager.GetUserAsync(User);
+
+            // Verifică dacă utilizatorul există
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            // Actualizează datele utilizatorului
+            user.UserName = newData.UserName;
+            user.Email = newData.Email;
+            user.FirstName = newData.FirstName;
+            user.LastName = newData.LastName;
+            user.PhoneNumber = newData.PhoneNumber;
+
+            // Salvează modificările în baza de date
+            var result = await _userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+                // Redirecționează către o acțiune sau pagină specifică pentru profilul editat
+                return RedirectToAction("ShowProfile", new { id = user.Id }); 
+            }
+            else
+            {
+                // În caz de erori, adaugă erorile în ModelState
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+
+                // Returnează view-ul cu erorile
+                return View(user);
+            }
+        }
+
+        // vizualizarea profilului
+        public async Task<IActionResult> ShowProfile(string id)
+        {
+            ApplicationUser user = await _userManager.FindByIdAsync(id);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View("ShowProfile", user);
+        }
+
+
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Delete(string id)
         {
@@ -146,7 +220,7 @@ namespace PetConnect.Controllers
             return RedirectToAction("Index");
         }
 
-
+        [Authorize(Roles = "Admin")]
         [NonAction]
         public IEnumerable<SelectListItem> GetAllRoles()
         {
