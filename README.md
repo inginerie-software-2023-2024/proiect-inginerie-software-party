@@ -156,7 +156,7 @@ As an administrator, I want the capability to review and moderate user-generated
 As an administrator, I want the capability to assign different roles and permissions to staff members involved in platform management so that I can delegate responsibilities effectively.
 
 ## Backlog
-Link Trello: https://trello.com/b/uqZEI5tk/pet-adoption
+Link Trello: https://trello.com/b/uqZEI5tk/pet-adoption (https://trello.com/invite/b/uqZEI5tk/ATTId86dcf5f5bf7a4c40339fb5f421e87e7AF3D7857/pet-adoption)
 
 
 
