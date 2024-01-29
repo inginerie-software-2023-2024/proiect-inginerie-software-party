@@ -1,24 +1,40 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PetConnect.Data;
+using PetConnect.Models;
 
-namespace PetConnect.Controllers
+public class ContactController : Controller
 {
-    public class ContactController : Controller
+    private readonly ApplicationDbContext _context;
+
+    public ContactController(ApplicationDbContext context)
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Index(string name, string email, string _subject, string message)
-        {
-            // logica pentru a procesa datele formularului
-            return RedirectToAction("ThankYou");
-        }
-
-        public ActionResult ThankYou()
-        {
-            return View();
-        }
+        _context = context;
     }
+
+    public IActionResult New()
+    {
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult New(Contact contact)
+    {
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                _context.Add(contact);
+                _context.SaveChanges();
+               
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", "An error occurred while saving the data.");
+               
+            }
+        }
+        return View(contact);
+    }
+
+  
 }
