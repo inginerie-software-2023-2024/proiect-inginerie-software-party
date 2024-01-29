@@ -18,5 +18,6 @@ namespace PetConnect.Data
 
         public DbSet<Chat> Chats { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
     }
 }
