@@ -26,5 +26,5 @@ jobs:
       run: dotnet restore
       working-directory: PetConnect/PetConnect
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build
       working-directory: PetConnect
