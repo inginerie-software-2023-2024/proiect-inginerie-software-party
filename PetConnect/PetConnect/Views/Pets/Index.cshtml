@@ -140,7 +140,7 @@
                     </div>
                 </div>
             </a>
-            @if(ViewBag.EsteAdmin || ViewBag.CurrentUser == pet.UserId)
+            @if(ViewBag.EsteAdmin || ViewBag.UserCurent == pet.UserId)
             {
                 <div class="flex justify-around mb-4">
                     <a href="/Pets/Edit/@pet.PetId" class="mt-auto flex items-center justify-center px-3 py-2 text-white bg-blue-500 rounded-md shadow hover:bg-blue-700">

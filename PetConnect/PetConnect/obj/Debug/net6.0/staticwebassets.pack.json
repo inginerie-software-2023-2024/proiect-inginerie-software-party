@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\images\\Profile6.jpg"
     },
     {
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\Radar2.jpg",
+      "PackagePath": "staticwebassets\\images\\Radar2.jpg"
+    },
+    {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\aboutus.png",
       "PackagePath": "staticwebassets\\images\\aboutus.png"
     },
@@ -73,6 +77,14 @@
       "PackagePath": "staticwebassets\\images\\cat3.jpeg"
     },
     {
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\gatoo.jpg",
+      "PackagePath": "staticwebassets\\images\\gatoo.jpg"
+    },
+    {
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\gogosica.jpg",
+      "PackagePath": "staticwebassets\\images\\gogosica.jpg"
+    },
+    {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\image 17.png",
       "PackagePath": "staticwebassets\\images\\image 17.png"
     },
@@ -93,8 +105,16 @@
       "PackagePath": "staticwebassets\\images\\images.jpg"
     },
     {
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\max.jpg",
+      "PackagePath": "staticwebassets\\images\\max.jpg"
+    },
+    {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\profile_pic.jpg",
       "PackagePath": "staticwebassets\\images\\profile_pic.jpg"
+    },
+    {
+      "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\robert.jpg",
+      "PackagePath": "staticwebassets\\images\\robert.jpg"
     },
     {
       "Id": "D:\\Info\\Facultate\\Anul3\\IS\\proiect-inginerie-software-party\\PetConnect\\PetConnect\\wwwroot\\images\\turtle.jpg",

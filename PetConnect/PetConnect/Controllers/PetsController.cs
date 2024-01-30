@@ -547,9 +547,15 @@ namespace PetConnect.Controllers
         public ActionResult Delete(int id)
         {
             Pet pet = db.Pets.Include("Comments")
-                                 .Where(pet => pet.PetId == id)
-                                 .First();
+                             .Include("AdoptionRequests")
+                             .Where(pet => pet.PetId == id)
+                             .First();
             if (pet.AdoptionRequests != null && pet.AdoptionRequests.Any())
+            {
+                TempData["message"] = "Nu puteti sterge un anunt care are cereri de adoptie";
+                return RedirectToAction("Index");
+            }
+            else
             {
                 if (pet.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
                 {
@@ -564,12 +570,7 @@ namespace PetConnect.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            else
-            {
-                TempData["message"] = "Nu puteti sterge un anunt care are cereri de adoptie";
-                return RedirectToAction("Index");
-            }
-                
+
         }
 
 

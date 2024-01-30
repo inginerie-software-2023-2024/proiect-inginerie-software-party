@@ -85,7 +85,9 @@ namespace PetConnect.Controllers
         [Authorize]
         public IActionResult ChangeStatus(int id, int requestStatus)
         {
-            AdoptionRequest adoptionRequest = _db.AdoptionRequests.Find(id);
+            AdoptionRequest adoptionRequest = _db.AdoptionRequests.Include("Pet")
+                                                      .Where(ar => ar.RequestId == id)
+                                                      .First(); 
             var currentUserId = _userManager.GetUserId(User);
 
             if (User.IsInRole("Admin") || currentUserId == adoptionRequest.Pet.UserId)

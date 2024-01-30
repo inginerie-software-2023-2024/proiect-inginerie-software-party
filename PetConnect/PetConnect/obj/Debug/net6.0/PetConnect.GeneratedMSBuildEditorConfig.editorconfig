@@ -18,8 +18,64 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Info\Facultate\Anul3\IS\proiect-inginerie-software-party\PetConnect\PetConnect
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Manage/Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcTGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcUGVyc29uYWxEYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcVHdvRmFjdG9yQXV0aGVudGljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Manage/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Manage/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNlbmRFbWFpbENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Areas/Identity/Pages/Account/_ViewImports.cshtml]
@@ -54,12 +110,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRvcHRpb25SZXF1ZXN0c1xTaG93U2VudFJlcXVlc3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Views/Blogs/Blog1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcQmxvZzEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Views/Blogs/Blog2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcQmxvZzIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Views/Blogs/Blog3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ3NcQmxvZzMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Views/Comments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Views/Contact/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Views/Contact/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxOZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Views/Home/Index.cshtml]
@@ -104,6 +172,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Views/Users/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Views/Users/ShowProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcU2hvd1Byb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Info/Facultate/Anul3/IS/proiect-inginerie-software-party/PetConnect/PetConnect/Views/_ViewImports.cshtml]
